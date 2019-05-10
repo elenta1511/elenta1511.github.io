@@ -1,0 +1,120 @@
+.main {
+  width: 1010px;
+  display: flex;
+}
+
+.main__left {
+  margin-left: 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-family: 'AlegreyaSans-Bold';
+    font-size: 60px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin: 0 0 5px;
+  }
+  &__text {
+    font-family: 'AlegreyaSans-Regular';
+    font-size: 21px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  &__button {
+    width: 155px;
+    height: 60px;
+    color: #0f5a47;
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+    a {
+      color: #0f5a47;
+      font-family: 'AlegreyaSans-ExtraBold';
+      text-transform: uppercase;
+      font-size: 19px;
+    }
+  }
+}
+
+.advant {
+  display: flex;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    margin-right: 45px;
+  }
+  &__pic-img {
+    filter: brightness(0)  invert(1);
+    margin-right: 10px;
+  }
+  &__text {
+    font-family: 'AlegreyaSans-Regular';
+    font-size: 16px;
+    line-height: auto;
+    color: #ffffff;
+  }
+}
+
+.main__right {
+  width: 460px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.pagination {
+  padding-top: 55px;
+&__pages {
+  display: flex;
+  flex-direction: column;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    filter: brightness(0)  invert(1);
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-bottom: 3px;
+  }
+  li:active, &-active {
+    border: 1px solid #ffffff;
+  } 
+ }
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 523px;
+  width: 503px;
+  &__choco {
+    position: absolute;
+    bottom: 19%;
+    left: 31px;
+    width: 503px;
+    height: 523px;
+  }
+  &__berry {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  }
+
+  .picture__leaves {
+    position: absolute;
+    left: 15%;
+    bottom: 7%;
+  }

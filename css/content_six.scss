@@ -1,0 +1,113 @@
+.circle {
+  height: 32px;
+  width: 75px;
+  background-color: white;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  position: absolute;
+  margin-left: 29%;
+}
+
+.reviews {
+  
+  &__strawberry {
+  display: flex;
+  justify-content: flex-end;
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    &-text {
+    font-family: 'AlegreyaSans-Bold';
+    font-size: 48px;
+    text-transform: uppercase;
+    }
+  }
+  &__content {
+    width: 940px;
+    height: 350px;
+    background-color: #f8faf9;
+    display: flex;
+    margin: 0 auto;
+    &-photo {
+      margin-left: 45px;
+      margin-right: 20px;
+      margin-top: 42px;
+      width: 255px;
+      height: 260px;
+      background-position: center;
+    }
+
+    &-text {
+      margin-top: 70px;
+      &-title {
+        font-family: 'AlegreyaSans-Medium';
+        font-size: 29.96px;
+        color: #323232;
+        margin-bottom: 29px;
+      }
+      &-content {
+        font-family: 'AlegreyaSans-Regular';
+        font-size: 17.98px;
+        margin-bottom: 29px;
+        color: #666666;
+      }
+      &-name {
+        font-family: 'AlegreyaSans-Medium';
+        font-size: 17.98px;
+        color: #666666;
+      }
+    }
+  }
+}
+
+.branch {
+  margin-left: auto;
+}
+
+.reviews__users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 44px;
+  &-list {
+    display: flex;
+    width: 380px;
+    justify-content: space-between;
+    li:first-child .reviews__users-img {
+      background-position: 50% 50%;
+    }
+    li:last-child .reviews__users-img {
+      background-position: 45% 30%;
+    }
+    li:nth-child(2n) .reviews__users-img {
+      background-position: 50% 10%;
+    }
+  }
+  &-img {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+  }
+}
+
+.user-active {
+  border: 6px solid #0f5a47;
+}
+
+.pic {
+  position: relative;
+  height: 380px;
+  width: 158px;
+  &__leaf {
+    position: absolute;
+    bottom: 100px;
+  }
+  &__berries {
+    position: absolute;
+  }
+}
+
+
+

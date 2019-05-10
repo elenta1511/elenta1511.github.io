@@ -1,0 +1,66 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  &__content {
+    width: 940px;
+    margin: 0 80px;
+  }
+  &__name {
+    align-self: center;
+    margin-bottom: 76px;
+    &-title {
+      font-family: 'AlegreyaSans-Bold';
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+  }
+  &__content-list {
+    display: flex;
+    justify-content: space-between;
+    height: 462px;
+    align-items: flex-end;
+    li:nth-child(2n+1) {
+      align-self: flex-start;
+    }
+  }
+  &__content-photo {
+      margin-bottom: 24px;
+      height: 290px;
+      width: 220px;
+      background-position: center;
+    }
+  &__content-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-name {
+      font-family: 'AlegreyaSans-Medium';
+      font-size: 20.98px;
+      margin-bottom: 18px;
+      color: #323232;
+    }
+    &-proff {
+      font-family: 'AlegreyaSans-Regular';
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #281e1e;
+    }
+    &-text {
+      color: #666666;
+      font-family: 'AlegreyaSans-Light';
+      font-size: 17.98px;
+      text-align: center;
+    }
+  }
+}
+
+.raspberries {
+  position: relative;
+  &__img {
+    position: relative;
+    top: 11px;
+    left: 40px;
+  }
+}

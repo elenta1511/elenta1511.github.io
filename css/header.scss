@@ -1,0 +1,52 @@
+.header {
+  color: #ffffff;
+  padding: 21px 70px 95px;
+  display: flex;
+     &__logo {
+    font-size: 24px;
+    margin-right: 40px;
+    font-family: 'MuseoSansCyrl_500';
+    line-height: 21px;
+    }
+    &__sidebar {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    
+    }
+    &__sidebar-list {
+      width: 630px;
+      display: flex;
+      justify-content: space-between;
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+    &__sidebar-item {
+      font-size: 18px;
+     
+      a {
+        color: #ffffff;
+        font-family: 'AlegreyaSans-Regular';
+      }
+    } 
+    &__phone {
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      font-family: 'AlegreyaSans-Regular';
+      text-transform: uppercase;
+      a {
+        color: #ffffff;
+        
+      }
+    }
+    &__phone-pic {
+      margin: 8px;
+      img {
+        height: 13px;
+        width: 15px;
+        filter: brightness(0)  invert(1);
+      }
+    }
+}

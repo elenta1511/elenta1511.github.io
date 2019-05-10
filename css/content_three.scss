@@ -1,0 +1,111 @@
+.range {
+display: flex;
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    
+  }  
+  &__one {
+    display: flex;
+    padding-top: 115px;
+    justify-content: center;
+    margin: 0 0 0 70px;
+    height: 655px;
+    
+  }
+  &__pic {
+
+    position: relative;
+    &-light {
+      position: relative;
+      top:160px;
+    }
+    &-blue {
+      position: relative;
+      bottom: 150px;
+    }
+    &-img {
+      position: absolute;
+      top: 20px;
+    }
+    &-leaves {
+      position: relative;
+      bottom: 450px;
+      right: 70px;
+    }
+  }
+  &__content-title {
+    font-family: 'AlegreyaSans-Bold';
+    font-size: 36px;
+    margin-bottom: 41px;
+    text-transform: uppercase;
+  }
+  &__content-comp {
+    font-family: 'AlegreyaSans-Medium';
+    font-size: 23.97px;
+    color: #323232;
+    margin-bottom: 31px;
+  }
+  &__content-text {
+    font-family: 'AlegreyaSans-Regular';
+    font-size: 17.98px;
+    color: #666666;
+    margin-bottom: 49px;
+  }
+  &__content-specif {
+    display: flex;
+    font-family: 'AlegreyaSans-Regular';
+    font-size: 17.98px;
+    color: #333333;
+    margin-bottom: 36px;
+    span {
+      font-family: 'AlegreyaSans-Bold';
+    }
+    &-kkal {
+      margin-right: 50px;
+    }
+  }
+  &__content-order {
+    display: flex;
+    &-cost {
+      font-family: 'AlegreyaSans-Light';
+      font-size: 60px;
+      text-transform: uppercase;
+      color: #0d0d0d;
+      margin-right: 31px;
+    }
+  }
+  &__content-img {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    left: 77%;
+    top: 228%;
+    &-blueberry {
+      position: absolute;
+      left: 20%;
+      top: 30%; 
+    }
+  }
+}
+
+.range-button {
+  height: 57px;
+  width: 155px;
+  border-radius: 30px;
+  background-color: #0f5a47;
+  color: #ffffff;
+  font-family: 'AlegreyaSans-ExtraBold';
+  font-size: 19px;
+  text-transform: uppercase;
+  border: 1px solid #0f5a47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 104px;
+  &:hover {
+    color: #0b4d3c;
+  }
+}
