@@ -73,6 +73,7 @@
 
 .pagination {
   padding-top: 55px;
+  position: fixed;
 &__pages {
   display: flex;
   flex-direction: column;

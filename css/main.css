@@ -597,7 +597,8 @@ h1, h2, h3, h4, h5 {
   align-items: end; }
 
 .pagination {
-  padding-top: 55px; }
+  padding-top: 55px;
+  position: fixed; }
   .pagination__pages {
     display: -webkit-box;
     display: -ms-flexbox;
