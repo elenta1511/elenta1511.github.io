@@ -111,6 +111,8 @@
     background-color: #ffffff;
     color: #0f5a47;
     border: 0;
+    position: absolute;
+    z-index: 1;
     &:hover {
       background-color: #0f5a47;
       color: #ffffff;

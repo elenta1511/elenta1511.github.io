@@ -663,7 +663,9 @@ h1, h2, h3, h4, h5 {
 .button_one {
   background-color: #ffffff;
   color: #0f5a47;
-  border: 0; }
+  border: 0;
+  position: absolute;
+  z-index: 1; }
   .button_one:hover {
     background-color: #0f5a47;
     color: #ffffff; }
