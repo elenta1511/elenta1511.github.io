@@ -23,6 +23,26 @@ h1, h2, h3, h4, h5 {
   padding: 0;
 }
 
+.button {
+  height: 57px;
+  width: 155px;
+  border-radius: 30px;
+  background-color: #0f5a47;
+  color: #ffffff;
+  font-family: 'AlegreyaSans-ExtraBold';
+  font-size: 19px;
+  text-transform: uppercase;
+  border: 1px solid #0f5a47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 104px;
+  cursor: pointer;
+  &:hover {
+    background-color: #0b4d3c;
+  }
+}
+
 .block__one {
   background-color: #61c4d9;
 }
