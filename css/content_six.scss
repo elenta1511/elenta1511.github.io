@@ -5,24 +5,19 @@
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
   position: absolute;
-  margin-left: 29%;
+  margin-left: 45%;
 }
 
 .reviews {
   
   &__strawberry {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 0;
   }
   &__title {
-    display: flex;
-    justify-content: center;
     margin-bottom: 60px;
-    &-text {
-    font-family: 'AlegreyaSans-Bold';
-    font-size: 48px;
-    text-transform: uppercase;
-    }
+    padding-top: 110px;
+    text-align: center;
   }
   &__content {
     width: 940px;
@@ -30,6 +25,7 @@
     background-color: #f8faf9;
     display: flex;
     margin: 0 auto;
+    position: relative;
     &-photo {
       margin-left: 45px;
       margin-right: 20px;
@@ -70,7 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 44px;
+  margin-top: 44px;
   &-list {
     display: flex;
     width: 380px;
@@ -96,18 +92,18 @@
   border: 6px solid #0f5a47;
 }
 
-.pic {
-  position: relative;
-  height: 380px;
-  width: 158px;
-  &__leaf {
+  
+  .pic_leaf {
     position: absolute;
-    bottom: 100px;
+    top: 80%;
+    left: 0;
   }
-  &__berries {
+  .pic_berries {
     position: absolute;
+    left: 0;
+    top: 100%;
   }
-}
+
 
 
 

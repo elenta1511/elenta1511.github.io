@@ -3,12 +3,8 @@
   flex-direction: column;
   text-align: center;
   padding-top: 96px;
-  &__title {
-    font-family: 'AlegreyaSans-Bold';
-    font-size: 48px;
-    text-transform: uppercase;
-    margin: 0;
-    padding-bottom: 10px;
+  &_title {
+    margin-bottom: 10px;
   }
   &__text {
     font-family: 'AlegreyaSans-Regular';
@@ -19,12 +15,10 @@
 }
 
 .description {
-  display: flex;
-  &__list {
     display: flex;
     width: 960px;
     justify-content: space-between;
-  }
+
   &__icon {
     height: 132px;
     width: 132px;
@@ -58,10 +52,13 @@
   }
 }
 
+
 .img {
   align-self: end;
-  position: relative;
-  bottom: 350px;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  z-index: 1;
   &__leaf {
     filter: brightness(0)  invert(.95);
   }

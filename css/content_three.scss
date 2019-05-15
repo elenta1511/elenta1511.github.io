@@ -1,46 +1,45 @@
-.range {
+.slider {
 display: flex;
 
   &__arrow {
     display: flex;
     align-items: center;
-    padding-left: 50px;
+    margin-left: 50px;
     
   }  
   &__one {
     display: flex;
-    padding-top: 115px;
+    margin-top: 115px;
     justify-content: center;
-    margin: 0 0 0 70px;
+    margin-left: 70px;
     height: 655px;
     
   }
   &__pic {
-
     position: relative;
+
     &-light {
-      position: relative;
-      top:160px;
+      position: absolute;
+      top: 160px;
     }
     &-blue {
-      position: relative;
-      bottom: 150px;
+      position: absolute;
+      top: 108px;
     }
     &-img {
       position: absolute;
-      top: 20px;
+      top: 30px;
     }
     &-leaves {
-      position: relative;
-      bottom: 450px;
+      position: absolute; 
       right: 70px;
+      position: relative;
+      top: 23%;
     }
   }
-  &__content-title {
-    font-family: 'AlegreyaSans-Bold';
+  &_title {
     font-size: 36px;
     margin-bottom: 41px;
-    text-transform: uppercase;
   }
   &__content-comp {
     font-family: 'AlegreyaSans-Medium';
@@ -81,31 +80,13 @@ display: flex;
     position: absolute;
     display: inline-flex;
     flex-direction: column;
-    left: 77%;
-    top: 228%;
+    right: 0;
+    top: 62%;
     &-blueberry {
       position: absolute;
-      left: 20%;
-      top: 30%; 
+      right: 0;
+      bottom: 39%; 
     }
   }
 }
 
-.range-button {
-  height: 57px;
-  width: 155px;
-  border-radius: 30px;
-  background-color: #0f5a47;
-  color: #ffffff;
-  font-family: 'AlegreyaSans-ExtraBold';
-  font-size: 19px;
-  text-transform: uppercase;
-  border: 1px solid #0f5a47;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 104px;
-  &:hover {
-    color: #0b4d3c;
-  }
-}

@@ -1,9 +1,53 @@
+.accordion {
+  display: flex;
+}
 
-.menu__title-text {
-  font-family: 'AlegreyaSans-Bold';
-  font-size: 48px;
-  text-transform: uppercase;
+.accordion_title {
   color: #ffffff;
   padding-top: 103px;
   padding-left: 79px;
 }
+
+.accordion__list {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.accordion__form {
+  display: flex;
+}
+.accordion__form-title {
+  width: 99px;
+  height: 100vh;
+  color: #ffffff;
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  font-family: 'AlegreyaSans-Medium';
+  font-size: 48px;
+  padding-bottom: 42px;
+  justify-content: flex-end;
+  span {
+    transform: rotate(180deg);
+  }
+}
+
+.accordion__form-text {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.749;
+  color: #ffffff;
+  font-family: 'AlegreyaSans-Regular';
+  font-size: 16px;
+  line-height: 24px;
+  width: 0;
+  overflow: hidden;
+}
+
+.accordion_active {
+  .accordion__form-text {
+    padding: 55px 0 0 30px;
+    width: 530px;
+  }
+}
+

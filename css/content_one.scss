@@ -1,6 +1,7 @@
 .main {
-  width: 1010px;
   display: flex;
+  flex-direction: column;
+  margin-left: 66px;
 }
 
 .main__left {
@@ -10,11 +11,11 @@
 .content {
   display: flex;
   flex-direction: column;
-  &__title {
-    font-family: 'AlegreyaSans-Bold';
+ 
+  &_title {
     font-size: 60px;
     color: #ffffff;
-    text-transform: uppercase;
+
     line-height: 60px;
     margin: 0 0 5px;
   }
@@ -52,15 +53,16 @@
 }
 
 .main__right {
-  width: 460px;
+
   display: flex;
   justify-content: flex-end;
   align-items: end;
 }
 
 .pagination {
-  padding-top: 55px;
+  margin-top: 55px;
   position: fixed;
+  align-self: flex-end;
 &__pages {
   display: flex;
   flex-direction: column;
@@ -82,29 +84,26 @@
 }
 
 .picture {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 523px;
-  width: 503px;
+
   &__choco {
     position: absolute;
-    bottom: 19%;
-    left: 31px;
-    width: 503px;
-    height: 523px;
+    right: 3%;
+    top: 10%;
+    
   }
   &__berry {
     position: absolute;
-    top: 50%;
-    left: 10%;
-  }
-  }
+    top: 67%;
+    right: 10%;
+    z-index: 1;
+ }
+}
 
   .picture__leaves {
     position: absolute;
-    left: 15%;
-    bottom: 7%;
+    top: 60%;
+    left: 0;
+    z-index: 1;
   }
 
   .button_one {
@@ -112,7 +111,8 @@
     color: #0f5a47;
     border: 0;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
+    margin: 0;
     &:hover {
       background-color: #0f5a47;
       color: #ffffff;

@@ -23,6 +23,13 @@ h1, h2, h3, h4, h5 {
   padding: 0;
 }
 
+.title {
+  font-family: 'AlegreyaSans-Bold';
+  text-transform: uppercase;
+  color: black;
+  font-size: 48px;
+}
+
 .button {
   height: 57px;
   width: 155px;
@@ -36,36 +43,68 @@ h1, h2, h3, h4, h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 104px;
   cursor: pointer;
   &:hover {
     background-color: #0b4d3c;
   }
 }
 
-.block__one {
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+.hero {
   background-color: #61c4d9;
+  background-image: url(../img/background_one.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
-.block__two {
+.benefit {
   background-color: #ffffff;
-  height: 650px;
+  position: relative;
 }
 
-.block__three {
+.assortment {
   background-color: #f8faf9;
-  height: 655px;
+  position: relative;
 }
 
-.block__four {
-  height: 770px;
+.workers {
+  position: relative;
+}
+.menu {
+    background-image: url(../img/fon_menu.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-.block__five {
-  margin-bottom: 20px;
+.feedback {
+  position: relative;
 }
 
-.block_seven {
+.video_block {
   background-color: #f8faf9;
-  height: 721px;
+}
+
+.order {
+    background-color: #cfdeda;
+    background-image: url(../img/fon_form.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.map {
+    height: 100vh;
+    background-color: #cfdeda;
+    position: relative;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
