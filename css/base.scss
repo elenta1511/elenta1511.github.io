@@ -23,6 +23,22 @@ h1, h2, h3, h4, h5 {
   padding: 0;
 }
 
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+html {
+  font-size: 16px;
+
+@media(max-width: 768px) {
+  font-size: 15px;
+}
+@media(max-width: 480px) {
+  font-size: 13px;
+} 
+}
+
 .title {
   font-family: 'AlegreyaSans-Bold';
   text-transform: uppercase;
@@ -31,13 +47,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .button {
-  height: 57px;
-  width: 155px;
-  border-radius: 30px;
+  height: 3.5625rem;
+  width: 9.6875rem;
+  border-radius: 1.875rem;
   background-color: #0f5a47;
   color: #ffffff;
   font-family: 'AlegreyaSans-ExtraBold';
-  font-size: 19px;
+  font-size: 1.1875rem;
   text-transform: uppercase;
   border: 1px solid #0f5a47;
   display: flex;
@@ -60,6 +76,7 @@ button:focus {
   background-image: url(../img/background_one.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 100vw;
 
 }
 

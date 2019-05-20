@@ -1,0 +1,75 @@
+@media (max-width: 768px) {
+  html {
+    font-size: 16px; }
+  .hero {
+    background-position: top; }
+  .main {
+    max-width: 590px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0 auto; }
+  .container_hero {
+    background-image: url("../img/chocco760.png");
+    background-repeat: no-repeat;
+    background-position: top; }
+  .pagination {
+    opacity: 0; }
+  .content {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 70%; }
+  .button_one {
+    position: static; }
+  .header__nav {
+    height: 27px;
+    width: 27px;
+    background-image: url("../img/menu_icon.png");
+    background-repeat: no-repeat;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    position: relative;
+    margin: 0; }
+    .header__nav-list {
+      visibility: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: absolute; }
+  .phone_link {
+    visibility: hidden;
+    position: absolute;
+    top: -1000px; }
+  .header {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 21px 24px 0; }
+    .header__logo {
+      margin: 0; }
+  .header__nav:hover .header__nav-list {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    background-color: #303436;
+    opacity: .99;
+    z-index: 10;
+    text-align: center;
+    visibility: visible; }
+  .picture__choco,
+  .picture__berry,
+  .picture__leaves {
+    visibility: hidden;
+    position: relative;
+    right: 1000px; } }

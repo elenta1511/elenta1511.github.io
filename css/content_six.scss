@@ -1,57 +1,70 @@
 .circle {
-  height: 32px;
-  width: 75px;
+  height: 2rem;
+  width: 4.6875rem;
   background-color: white;
-  border-bottom-left-radius: 32px;
-  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   position: absolute;
   margin-left: 45%;
 }
 
 .reviews {
-  
+
+  &__elem {
+    display: flex;
+    height: 0;
+    visibility: hidden;
+  }
+
+  &_active {
+    visibility: visible;
+    height: 265px;
+  }
+
   &__strawberry {
   position: absolute;
   right: 0;
   }
   &__title {
-    margin-bottom: 60px;
-    padding-top: 110px;
+    margin-bottom: 3.75rem;
+    padding-top: 6.875rem;
     text-align: center;
   }
   &__content {
-    width: 940px;
-    height: 350px;
+    width: 58.75rem;
+    height: 21.875rem;
     background-color: #f8faf9;
     display: flex;
     margin: 0 auto;
     position: relative;
     &-photo {
-      margin-left: 45px;
-      margin-right: 20px;
-      margin-top: 42px;
-      width: 255px;
-      height: 260px;
+      margin-left: 2.8125rem;
+      margin-right: 1.25rem;
+      margin-top: 2.625rem;
+      width: 15.9375rem;
+      height: 16.25rem;
       background-position: center;
+      background-size: cover;
     }
 
     &-text {
-      margin-top: 70px;
+      margin-top: 4.375rem;
+      width: 492px;
       &-title {
         font-family: 'AlegreyaSans-Medium';
-        font-size: 29.96px;
+        font-size: 1.875rem;
         color: #323232;
-        margin-bottom: 29px;
+        margin-bottom: 1.8125rem;
       }
       &-content {
         font-family: 'AlegreyaSans-Regular';
-        font-size: 17.98px;
-        margin-bottom: 29px;
+        font-size: 1.125rem;
+        margin-bottom: 1.8125rem;
         color: #666666;
       }
       &-name {
         font-family: 'AlegreyaSans-Medium';
-        font-size: 17.98px;
+        font-size: 1.125rem;
         color: #666666;
       }
     }
@@ -66,30 +79,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 44px;
+  margin-top: 2.75rem;
   &-list {
     display: flex;
-    width: 380px;
+    width: 23.75rem;
     justify-content: space-between;
     li:first-child .reviews__users-img {
       background-position: 50% 50%;
     }
     li:last-child .reviews__users-img {
-      background-position: 45% 30%;
+      background-position: 50% 0%;
+      background-size: 120%;
     }
     li:nth-child(2n) .reviews__users-img {
+      background-size: 140%;
       background-position: 50% 10%;
     }
   }
   &-img {
-    width: 98px;
-    height: 98px;
+    width: 6.125rem;
+    height: 6.125rem;
     border-radius: 50%;
   }
 }
 
 .user-active {
-  border: 6px solid #0f5a47;
+  border: .375rem solid #0f5a47;
 }
 
   

@@ -1,5 +1,5 @@
 .footer {
-  height: 93px;
+  height: 5.8125rem;
   background-color: #ffffff;
   position: absolute;
   bottom: 0;
@@ -9,7 +9,7 @@
 
 .footer__content {
   display: flex;
-  padding: 0 80px;
+  padding: 0 5rem;
 }
 
 .contacts {
@@ -23,7 +23,7 @@
 .contacts__address,
 .contacts__phone {
   font-family: 'AlegreyaSans-Regular';
-  font-size: 21px;
+  font-size: 1.3125rem;
 }
 
 
@@ -34,7 +34,7 @@
 }
 
 .contacts__phone-img {
-  margin-right: 6px;
+  margin-right: .375rem;
 }
 
 .social {

@@ -1,11 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  margin-left: 66px;
-}
-
-.main__left {
-  margin-left: 24px;
+  margin-left: 4.125rem;
 }
 
 .content {
@@ -13,21 +9,21 @@
   flex-direction: column;
  
   &_title {
-    font-size: 60px;
+    font-size: 3.75rem;
     color: #ffffff;
 
-    line-height: 60px;
-    margin: 0 0 5px;
+    line-height: 3.75rem;
+    margin: 0 0 .3125rem;
   }
   &__text {
     font-family: 'AlegreyaSans-Regular';
-    font-size: 21px;
+    font-size: 1.3125rem;
     color: #ffffff;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
   &__button {
-    height: 57px;
-    margin-bottom: 70px;
+    height: 3.5625rem;
+    margin-bottom: 4.375rem;
   }
 }
 
@@ -38,15 +34,19 @@
   }
   &__item {
     display: flex;
-    margin-right: 45px;
+    margin-right: 2.8125rem;
   }
   &__pic-img {
-    filter: brightness(0)  invert(1);
-    margin-right: 10px;
+    stroke: #ffffff;
+    fill: transparent;
+    margin-right: .625rem;
+    height: 50px;
+    width: 50px;
+    
   }
   &__text {
     font-family: 'AlegreyaSans-Regular';
-    font-size: 16px;
+    font-size: 1rem;
     line-height: auto;
     color: #ffffff;
   }
@@ -60,7 +60,7 @@
 }
 
 .pagination {
-  margin-top: 55px;
+  margin-top: 3.4375rem;
   position: fixed;
   align-self: flex-end;
 &__pages {
@@ -70,12 +70,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     filter: brightness(0)  invert(1);
-    height: 16px;
-    width: 16px;
+    height: 1rem;
+    width: 1rem;
     border-radius: 50%;
-    margin-bottom: 3px;
+    margin-bottom: .1875rem;
   }
   li:active, &-active {
     border: 1px solid #ffffff;
@@ -91,20 +91,7 @@
     top: 10%;
     
   }
-  &__berry {
-    position: absolute;
-    top: 67%;
-    right: 10%;
-    z-index: 1;
- }
 }
-
-  .picture__leaves {
-    position: absolute;
-    top: 60%;
-    left: 0;
-    z-index: 1;
-  }
 
   .button_one {
     background-color: #ffffff;
@@ -117,4 +104,17 @@
       background-color: #0f5a47;
       color: #ffffff;
     }
+  }
+
+  .pic_hero {
+    position: absolute;
+    bottom: -36px;
+    right: 0;
+    z-index: 1;
+  }
+
+  .picture_hero {
+    position: absolute;
+    bottom: 15px;
+    right: 26px;
   }

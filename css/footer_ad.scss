@@ -1,0 +1,24 @@
+@media(max-width:768px){
+.footer__content {padding: 0 1.5rem;}
+}
+
+@media(max-width:480px) {
+  .footer {
+    height: 155px;
+  }
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts__address,
+  .contacts__phone {
+    font-weight: bold;
+  }
+  .contacts__address {
+    margin-bottom: 20px;
+  }
+  .contacts__phone {
+    justify-content: center;
+  }
+  .social {margin-top: 25px;}
+}

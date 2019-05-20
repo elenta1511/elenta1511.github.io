@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <title>CHOCCO</title>
@@ -19,6 +19,7 @@
         <div class="header__logo">CHO <br> CCO</div>
         
         <nav class="header__nav">
+          <div class="close"></div>
           <ul class="header__nav-list">
             <li class="header__nav-item"><a href="#">О нас</a></li>
             <li class="header__nav-item"><a href="#">Батончики</a></li>
@@ -37,8 +38,6 @@
 
       <div class="main">
 
-      
-
        <div class="content">
          <h1 class="title content_title">натуральные <br> шоколадные <br> батончики</h1>
          <div class="content__text">Наши батончики идеально подходят для <br> тех, кто следит за своим здоровьем </div>
@@ -48,28 +47,36 @@
         <div class="advant">
           <ul class="advant__list">
             <li class="advant__item">
-              <div class="advant__pic"><img src="img/main_icon_one.png" alt="" class="advant__pic-img"></div>
+              <div class="advant__pic">
+                <svg viewBox="0 0 20 20" class="advant__pic-img">
+                  <use xlink:href="svg/sprite.svg#leaves"></use>
+                  </svg>
+                </div>
               <div class="advant__text">100% <br> натуральный <br> продукт</div>
             </li>
             <li class="advant__item">
-                <div class="advant__pic"><img src="img/main_icon_two.png" alt="" class="advant__pic-img"></div>
+                <div class="advant__pic"><svg viewBox="0 0 20 20" class="advant__pic-img">
+                    <use xlink:href="svg/sprite.svg#auto"></use>
+                    </svg>
+                  </div>
                 <div class="advant__text">3-5 дней <br> доставка <br> по РФ</div>
               </li>
               <li class="advant__item">
-                  <div class="advant__pic"><img src="img/main_icon_three.png" alt="" class="advant__pic-img"></div>
+                  <div class="advant__pic"><svg  viewBox="0 0 20 20" class="advant__pic-img">
+                      <use xlink:href="svg/sprite.svg#scale"></use>
+                      </svg></div>
                   <div class="advant__text">Не портит <br> фигуру</div>
                 </li>
           </ul>
         </div>
       
-
-      
-          
               
                 <img src="img/choco.png" alt="" class="picture__choco">
-                <img src="img/berries.png" alt="" class="picture__berry">
+                <div class="pic_hero">
+                <img src="img/berries.png" alt="" class="picture__berry"></div>
+                <div class="picture_hero">
                 <img src="img/leaves.png" alt="" class="picture__leaves">
-              
+              </div>
 
               <div class="pagination">
                   <ul class="pagination__pages">
@@ -209,7 +216,7 @@
               <div class="team__photo" style="background-image:url('img/boris.jpg');">
               </div>
               <div class="team__description">
-              <div class="team__description-name">Борис Федорович<div class="triangle"></div></div>
+              <div class="team__description-name"> <a href=""> Борис Федорович</a><div class="triangle"></div></div>
               <div class="team__description-proff">Главный технолог</div>
               <div class="team__description-text">Отвечает за вкусовые качества <br> и калорийность.</div>
              </div>
@@ -218,7 +225,7 @@
                 <div class="team__photo" style="background-image:url('img/alla.jpg')";>
                 </div>
                 <div class="team__description">
-                <div class="team__description-name">Алла Иванова<div class="triangle"></div></div>
+                <div class="team__description-name"><a href="">Алла Иванова</a><div class="triangle"></div></div>
                 <div class="team__description-proff">Специалист по упаковке</div>
                 <div class="team__description-text">Автор запоминающегося стиля<br>наших батончиков.</div>
                </div>
@@ -226,19 +233,19 @@
               <li class="team__content-item">
                   <div class="team__photo" style="background-image:url('img/kirill.jpg');">
                   </div>
-                  <div class="team__description desc_active">
-                  <div class="team__description-name">Кирилл Матросов <div class="triangle"></div></div>
+                  <div class="team__description ">
+                  <div class="team__description-name"><a href="">Кирилл Матросов </a><div class="triangle"></div></div>
                   <div class="team__description-proff">Оператор</div>
                   <div class="team__description-text">С радостью поможет подобрать <br>батончики и оформить заказ.</div>
                  </div>
                 </li>
-                <li class="team__content-item">
+                <li class="team__content-item desc_active">
                     <div class="team__photo" style="background-image:url('img/mila.jpg');">
                     </div>
                     <div class="team__description">
-                    <div class="team__description-name">Мила Рыжкова<div class="triangle"></div></div>
+                    <div class="team__description-name"><a href="">Мила Рыжкова</a><div class="triangle"></div></div>
                     <div class="team__description-proff">PR, маркетинг</div>
-                    <div class="team__description-text">По всем вопросам сотрудничества <br>и рекламы писать только Миле.</div>
+                    <div class="team__description-text">По всем вопросам <br> сотрудничества и рекламы <br> писать только Миле.</div>
                    </div>
                   </li>
           </ul>
@@ -254,13 +261,13 @@
 <section class="menu">
 
     <div class="accordion">
-      
+     
         <h2 class="title accordion_title">Меню</h2>
       
       <ul class="accordion__list">
-        <li class="accordion__item">
-          <div class="accordion__form accordion_active">
-            <div class="accordion__form-title" style="background-image:url('img/coco.jpg')";> <span> Батончики с молоком </span></div>
+        <li class="accordion__item ">
+          <div class="accordion__form">
+            <div class="accordion__form-title" style="background-image:url('img/coco.jpg')";> <a href="">Батончики с молоком </a> </div>
             <div class="accordion__form-text">
               Рекомендуем употреблять батончики вместе с кокосовым <br>
                или миндальным молоком. Так и вкуснее, и полезнее. <br>
@@ -272,9 +279,9 @@
             </div>
           </div>
         </li>
-        <li class="accordion__item">
+        <li class="accordion__item accordion_active">
           <div class="accordion__form">
-            <div class="accordion__form-title" style="background-image:url('img/granola.jpg');"> <span>С мёдом и фруктами </span> </div>
+            <div class="accordion__form-title" style="background-image:url('img/granola.jpg');"> <a href="">С мёдом и фруктами  </a>   </div>
             <div class="accordion__form-text">
               Рекомендуем употреблять батончики вместе с кокосовым <br>
               или миндальным молоком. Так и вкуснее, и полезнее. <br>
@@ -288,7 +295,7 @@
         </li>
         <li class="accordion__item">
           <div class="accordion__form">
-            <div class="accordion__form-title" style="background-image:url('img/berries_menu.jpg');"> <span> Дикие ягоды </span> </div>
+            <div class="accordion__form-title" style="background-image:url('img/berries_menu.jpg');"> <a href=""> Дикие ягоды </a> </div>
             <div class="accordion__form-text">
               Рекомендуем употреблять батончики вместе с кокосовым <br>
               или миндальным молоком. Так и вкуснее, и полезнее. <br>
@@ -315,19 +322,53 @@
       
       <div class="reviews__content">
         <div class="circle"></div>
+        <ul class="reviews__list">
+          <li class="reviews__elem ">
         <div class="reviews__content-photo" style="background-image:url('img/alena.jpg');">
         </div>
         <div class="reviews__content-text">
           <div class="reviews__content-text-title">Лучший перекус</div>
           <div class="reviews__content-text-content">
-            Я ем малыми порциями, но часто. Это повышает мою <br>
-            продуктивность в разы. В течении дня я сижу за компьютером <br>
-            и часто отходить в кафе или на кухню просто не могу себе <br>
-            позволить. А батончик - он всегда под рукой. Это приятно <br>
+            Я ем малыми порциями, но часто. Это повышает мою 
+            продуктивность в разы. В течении дня я сижу за компьютером 
+            и часто отходить в кафе или на кухню просто не могу себе 
+            позволить. А батончик - он всегда под рукой. Это приятно 
             и удобно.
           </div>
           <div class="reviews__content-text-name">Алёна Хмельницкая</div>
         </div>
+      </li>
+      <li class="reviews__elem reviews_active">
+          <div class="reviews__content-photo" style="background-image:url('img/maria.jpg');">
+          </div>
+          <div class="reviews__content-text">
+            <div class="reviews__content-text-title">Лучшие батончики премиум уровня</div>
+            <div class="reviews__content-text-content">
+              Батончики понравились. На мой взгяд слегка завышена цена по 
+              сравнению с конкурентами, однако, как говорится - оно того стоит. 
+              Нравится носить с собой, нравится держать в руке. Ну и конечно же, 
+              кушать. Идеально уталяют голод, хоть и не на долго. Через час уже ем
+              еще один. Но это скорее плюс, чем минус.
+            </div>
+            <div class="reviews__content-text-name">Мария Орлова</div>
+          </div>
+        </li>
+        <li class="reviews__elem ">
+            <div class="reviews__content-photo" style="background-image:url('img/vadim.jpg');">
+            </div>
+            <div class="reviews__content-text ">
+              <div class="reviews__content-text-title">Идеально подходят для спортсменов</div>
+              <div class="reviews__content-text-content">
+                После тренировок всегда хочется закинуться чем-то 
+                белковым, потому что до дома еще нужно доехать. А кушать 
+                хочется. Протеиновые батончики всегда выручают в этом плане. 
+                Спасибо производителю за этот качественный и экологичный 
+                продукт.
+              </div>
+              <div class="reviews__content-text-name">Вадим Грачев</div>
+            </div>
+          </li>
+      </ul>
         <div class="branch">
           <img src="img/branch.png" alt="" class="branch__pic">
         </div>
@@ -335,10 +376,10 @@
       <div class="reviews__users">
         <ul class="reviews__users-list">
           <li class="reviews__user-item">
-            <div class="reviews__users-img user-active" style="background-image:url('img/alena_min.jpg');"></div>
+            <div class="reviews__users-img " style="background-image:url('img/alena_min.jpg');"></div>
           </li>
           <li class="reviews__user-item">
-              <div class="reviews__users-img" style="background-image:url('img/maria.jpg');"></div>
+              <div class="reviews__users-img user-active" style="background-image:url('img/maria.jpg');"></div>
             </li>
             <li class="reviews__user-item">
                 <div class="reviews__users-img" style="background-image:url('img/vadim.jpg');"></div>
