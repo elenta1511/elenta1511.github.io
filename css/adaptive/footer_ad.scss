@@ -1,10 +1,10 @@
-@media(max-width:768px){
+@media screen and (max-width:768px), (max-width:1099px) {
 .footer__content {padding: 0 1.5rem;}
 }
 
 @media(max-width:480px) {
   .footer {
-    height: 155px;
+    height: 9.69rem;
   }
   .footer__content {
     flex-direction: column;
@@ -15,10 +15,10 @@
     font-weight: bold;
   }
   .contacts__address {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   .contacts__phone {
     justify-content: center;
   }
-  .social {margin-top: 25px;}
+  .social {margin-top: 1.5625rem;}
 }

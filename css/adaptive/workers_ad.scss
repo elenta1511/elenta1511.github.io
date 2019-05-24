@@ -1,0 +1,50 @@
+@media screen and (max-width: 768px), (max-width: 1099px) {
+  .team {padding-top: 3.5625rem;}
+  .team__content {
+    flex-flow: wrap;
+    width: auto;
+    height: 70%;
+    justify-content: space-evenly;
+    align-items: inherit;
+  }
+  .team_title {margin-bottom:3.5625rem;}
+  .team__photo {
+    height: 14.625rem;
+    width: 11.25rem;
+    margin: 0 auto;
+    background-size: cover;
+    margin: 0 auto;
+  }
+  .team__description {margin-top: 1.6875rem;}
+  .team__content-item {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team {padding-top: 1.5625rem;}
+  .team_title {
+    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
+  }
+  .team__photo {
+    height: 11.375rem;
+    width: 8.75rem;
+    margin: 0 auto;
+    background-size: cover;
+  }
+  .team__content {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .team__content-item {width: 50%;}
+  .team__description {margin-top: .625rem;}
+  .team__description-text {font-size: .75rem;}
+  .team__description-name {
+    margin-bottom: .1875rem;
+    font-size: .94rem;
+  }
+  .team__description-proff {font-size: .875rem;}
+  .desc_active .team__description-text {height: 2.9rem;}
+}

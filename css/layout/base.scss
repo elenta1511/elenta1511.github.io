@@ -30,13 +30,6 @@ h1, h2, h3, h4, h5 {
 
 html {
   font-size: 16px;
-
-@media(max-width: 768px) {
-  font-size: 15px;
-}
-@media(max-width: 480px) {
-  font-size: 13px;
-} 
 }
 
 .title {
@@ -44,6 +37,9 @@ html {
   text-transform: uppercase;
   color: black;
   font-size: 48px;
+  @media screen and (max-width:480px) {
+    font-size: 1.75rem;
+  }
 }
 
 .button {
@@ -63,12 +59,44 @@ html {
   &:hover {
     background-color: #0b4d3c;
   }
+  @media screen and (max-width:768px), (max-width:1099px) {
+    height: 2.6875rem;
+    width: 7.1875rem;
+    font-size: 1rem;
+  }
 }
 
 button, 
+input,
 button:active, 
 button:focus {
     outline: none;
+}
+
+.pagination {
+     position: fixed;
+     -ms-flex-item-align: end;
+     right: 5%;
+     z-index: 100;
+     top: 35%;
+&__pages {
+  display: flex;
+  flex-direction: column;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    filter: brightness(0)  invert(1);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-bottom: .1875rem;
+  }
+  li:active, &-active {
+    border: 1px solid #ffffff;
+  } 
+ }
 }
 
 .hero {
@@ -83,6 +111,12 @@ button:focus {
 .benefit {
   background-color: #ffffff;
   position: relative;
+  background-image: url("../img/leaf.png");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  @media screen and (max-width:480px) {
+    background-image: none;
+  }
 }
 
 .assortment {
@@ -107,6 +141,10 @@ button:focus {
 
 .video_block {
   background-color: #f8faf9;
+  background-image: url('../img/leaf_video.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 .order {

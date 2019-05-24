@@ -2,6 +2,8 @@
   color: #ffffff;
   margin: 21px 70px 95px;
   display: flex;
+  position: absolute;
+  top: 0;
      &__logo {
     font-size: 1.5rem;
     margin-right: 2.5rem;
@@ -34,11 +36,7 @@
     } 
     
     &__phone-pic {
-      margin: 8px;
-      height: .81rem;
-      width: .94rem;
       filter: brightness(0)  invert(1);
-      background: url('../img/main_icon_phone.png') center center no-repeat;
       }
     }
 
@@ -55,7 +53,6 @@
       }
 
       .phone_link:hover .header__phone-pic {
-        background: url('../img/phone_footer.png') center center no-repeat;
         filter: none;
       }
 

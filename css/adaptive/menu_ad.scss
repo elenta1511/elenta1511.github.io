@@ -1,0 +1,28 @@
+@media screen and (max-width:768px), (max-width: 1099px) {
+  .menu,
+  .accordion {min-height: 650px;}
+  .accordion {position: relative;}
+  .accordion__list {width: 100vw;}
+  .accordion_active {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .accordion__form-title {
+    width: 6.1875rem;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .menu,
+  .accordion {min-height: 568px;}
+  .accordion_title {font-size: 1.75rem;}
+  .accordion__form-title {
+    width: 3.75rem;
+  font-size: 2rem;}
+  .accordion__form-text {
+    font-size: .625rem;
+    
+  }
+}

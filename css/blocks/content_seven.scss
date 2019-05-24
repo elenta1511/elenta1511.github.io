@@ -1,0 +1,14 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.blackberry::before {
+  content: url("../img/blackberry.png");
+  position: absolute;
+  bottom: -6.25rem;
+  right: 0;
+}
+

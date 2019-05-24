@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 3.75rem;
   &_title {
     margin-bottom: .625rem;
   }
@@ -33,6 +32,8 @@
   &__icon-pic {
     height: 4.375rem;
     width: 4.375rem;
+    fill: #f2f5f4;
+    stroke: black;
   }
   &__container {
     display: flex;
@@ -53,13 +54,9 @@
 }
 
 
-.img {
-  align-self: end;
+.img::before {
+  content: url("../img/raspberries.png");
   position: absolute;
-  top: 30%;
   left: 0;
   z-index: 1;
-  &__leaf {
-    filter: brightness(0)  invert(.95);
-  }
 }

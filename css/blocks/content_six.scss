@@ -18,16 +18,17 @@
 
   &_active {
     visibility: visible;
-    height: 265px;
+    height: 16.5625rem;
   }
 
-  &__strawberry {
-  position: absolute;
-  right: 0;
+  &__strawberry::before {
+    content: url("../img/strawberry.png");
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   &__title {
     margin-bottom: 3.75rem;
-    padding-top: 6.875rem;
     text-align: center;
   }
   &__content {
@@ -49,7 +50,7 @@
 
     &-text {
       margin-top: 4.375rem;
-      width: 492px;
+      width: 100%;
       &-title {
         font-family: 'AlegreyaSans-Medium';
         font-size: 1.875rem;
@@ -73,6 +74,7 @@
 
 .branch {
   margin-left: auto;
+  width: 30%;
 }
 
 .reviews__users {
@@ -108,15 +110,23 @@
 }
 
   
-  .pic_leaf {
+  .pic_leaf::before {
+    content: url("../img/leaf_six.png");
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 0;
+    @media screen and (max-width:480px) {
+      opacity: 0;
+    }
   }
-  .pic_berries {
+  .pic_berries::before {
+    content: url("../img/berries_six.png");
     position: absolute;
     left: 0;
-    top: 100%;
+    bottom: -5.5rem;
+    @media screen and (max-width:480px) {
+      opacity: 0;
+    }
   }
 
 

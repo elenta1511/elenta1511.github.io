@@ -1,7 +1,6 @@
 .team {
   display: flex;
   flex-direction: column;
-  padding-top: 6.25rem;
   &__content-item {
     height: 26.25rem ;
   }
@@ -75,11 +74,13 @@
   }
 }
 
-.raspberries {
+.raspberries::before {
+  content: url("../img/raspberry.png");
   position: absolute;
-  left: 3%;
+    left: 0;
+    bottom: -40px;
+    z-index: 10;
 }
-
 .triangle {
   width: 0;
   height: 0;

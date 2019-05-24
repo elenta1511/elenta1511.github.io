@@ -9,10 +9,7 @@ display: flex;
   }  
   &__one {
     display: flex;
-    margin-top: 115px;
     justify-content: center;
-    margin-left: 70px;
-    height: 655px;
     @media(max-width: 480px){
       margin-top: 30px;
       margin-left: 0;
@@ -20,26 +17,11 @@ display: flex;
     
   }
   &__pic {
-    position: relative;
-
-    &-light {
-      position: absolute;
-      top: 160px;
-    }
-    &-blue {
-      position: absolute;
-      top: 108px;
-    }
-    &-img {
-      position: absolute;
-      top: 30px;
-    }
-    &-leaves {
-      position: absolute; 
-      right: 70px;
-      position: relative;
-      top: 23%;
-    }
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 480px;
+    background-position: 49% 0%;
+    margin-right: 25px;
   }
   &_title {
     font-size: 36px;
@@ -87,7 +69,8 @@ display: flex;
       margin-right: 31px;
     }
   }
-  &__content-img {
+  &__content-img::before {
+    content: url("../img/fern.png");
     position: absolute;
     display: inline-flex;
     flex-direction: column;
@@ -97,11 +80,16 @@ display: flex;
     @media(max-width: 480px){
       opacity: 0;
     }
-    &-blueberry {
-      position: absolute;
-      right: 0;
-      bottom: 39%; 
-    }
+   
   }
 }
+ .slider__content-img-bluberry::before {
+   content: url("../img/blueberries.png");
+   position: absolute;
+   right: 0;
+   bottom: -35px;
 
+  @media(max-width: 480px){
+    opacity: 0;
+}
+ }

@@ -1,0 +1,44 @@
+@media screen and (max-width:768px), (max-width:1099px) {
+  .description {flex-direction: column;}
+  .description__icon {
+    height: 7.68rem;
+    width: 7.68rem;
+    margin: 1.56rem auto;
+  }
+  .info {padding-top: 2.75rem; }
+  .description__container-title {margin-bottom: 1rem;}
+  .img {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    bottom: 190px;
+  }
+}
+
+@media screen and (max-width:480px) {
+
+  .info {padding-top: 1.25rem;}
+  .info_title {font-size: 1.75rem;}
+  .info__text {
+    font-size: .81rem;
+    margin-bottom: 0;
+  }
+  .description__icon {
+    height: 5rem;
+    width: 5rem;
+    margin: .25rem auto;
+}
+  .description__container-title {
+    font-size: 1.125rem;
+    margin-bottom: .1875rem;
+  }
+  .description__container-text {font-size: .75rem;}
+ 
+  
+  .container_benefit {
+    background-image: url('../img/leave_480.png');
+    background-repeat: no-repeat;
+    background-position: 0px 30%;
+    background-size: 45%;
+  }
+  }

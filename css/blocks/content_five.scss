@@ -1,5 +1,7 @@
 .accordion {
   display: flex;
+  height: 100vh;
+  min-height: 650px;
 }
 
 .accordion_title {
@@ -27,13 +29,16 @@
   font-family: 'AlegreyaSans-Medium';
   font-size: 3rem;
   justify-content: flex-end;
-  a {
+  }
+  .accordion__form-title a {
     transform: rotate(180deg);
     padding-top: 35px;
     color: #ffffff;
   }
-}
 
+ .accordion_active {
+   width: 100%;
+ }
 .accordion__form-text {
   background-color: rgb(0, 0, 0);
   opacity: 0.749;
@@ -48,7 +53,7 @@
 .accordion_active {
   .accordion__form-text {
     padding: 3.4375rem 0 0 1.875rem;
-    width: 33.125rem;
+    width: 100%;
   }
 }
 
