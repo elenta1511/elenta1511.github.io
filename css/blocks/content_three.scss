@@ -1,72 +1,128 @@
-.slider {
-display: flex;
+@function rem($px) {
+  @return ($px/16px) *1rem;
+}
 
-  &__arrow {
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-    
-  }  
+//breakpoints
+$tablets:768px;
+$phones:480px;
+
+
+@mixin tablets {
+  @media screen and (max-width: $tablets), (max-width: 1099px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media screen and (max-width: $phones) {
+    @content; 
+  }
+}
+
+.slider {
+display: flex; 
   &__one {
     display: flex;
     justify-content: center;
-    @media(max-width: 480px){
-      margin-top: 30px;
-      margin-left: 0;
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      width: rem(396px);
     }
-    
+    @include phone {
+      width: rem(290px);
+    }
   }
   &__pic {
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 480px;
+    width: rem(480px);
     background-position: 49% 0%;
-    margin-right: 25px;
-  }
-  &_title {
-    font-size: 36px;
-    margin-bottom: 41px;
-    @media(max-width:480px) {
-      font-size: 28px;
-      margin-bottom: 10px;
+    margin-right: rem(25px);
+    @include tablets {
+      height: rem(335px);
+      width: rem(372px);
+      margin-right: 0;
+      margin-bottom: rem(15px);
+    }
+    @include phone {
+      width: rem(282px);
+      height: rem(250px);
     }
   }
+  &__content {
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &_title {
+    font-size: rem(36px);
+    margin-bottom: rem(41px);
+    @include tablets {
+      font-size: rem(26px);
+      margin-bottom: rem(10px);
+      display: flex;
+      flex-direction: column;
+  }
+  @include phone {
+    font-size: rem(22px);
+  }
+    }
   &__content-comp {
     font-family: 'AlegreyaSans-Medium';
-    font-size: 23.97px;
+    font-size: rem(24px);
     color: #323232;
-    margin-bottom: 31px;
-    @media(max-width:480px) {
-      margin-bottom: 10px;
+    margin-bottom: rem(31px);
+    @include tablets {
+      margin-bottom: rem(10px);
+      font-size: rem(16px);
     }
   }
   &__content-text {
     font-family: 'AlegreyaSans-Regular';
-    font-size: 17.98px;
+    font-size: rem(18px);
     color: #666666;
-    margin-bottom: 49px;
+    margin-bottom: rem(49px);
+    @include tablets {
+    font-size: rem(14px);
+    width: 85%;
+    }
+    @include phone {
+      font-size: rem(12px);
+      width: 100%;
+    }
   }
   &__content-specif {
     display: flex;
     font-family: 'AlegreyaSans-Regular';
-    font-size: 17.98px;
+    font-size: rem(18px);
     color: #333333;
-    margin-bottom: 36px;
+    margin-bottom: rem(36px);
     span {
       font-family: 'AlegreyaSans-Bold';
     }
     &-kkal {
-      margin-right: 50px;
+      margin-right: rem(50px);
+    }
+    @include tablets {
+      font-size: rem(15px);
+      margin-bottom: rem(20px);
     }
   }
   &__content-order {
     display: flex;
+    align-items: center;
     &-cost {
       font-family: 'AlegreyaSans-Light';
-      font-size: 60px;
+      font-size: rem(60px);
       text-transform: uppercase;
       color: #0d0d0d;
       margin-right: 31px;
+      @include phone {
+        font-size: rem(50px);
+      }
     }
   }
   &__content-img::before {
@@ -76,20 +132,51 @@ display: flex;
     flex-direction: column;
     right: 0;
     top: 62%;
-
-    @media(max-width: 480px){
-      opacity: 0;
+    @include tablets {
+      content: url("../img/fern_768.png");
+      top: 80%;
     }
-   
+    @include phone {
+      content: url("../img/fern_480.png");
+      top: 80%;
+    }
+    }
   }
-}
+  .slider__content-order-button {
+    z-index: 1;
+  }
  .slider__content-img-bluberry::before {
    content: url("../img/blueberries.png");
    position: absolute;
    right: 0;
-   bottom: -35px;
-
-  @media(max-width: 480px){
-    opacity: 0;
+   bottom: rem(-35px);
+   @include tablets {
+     content: url("../img/blueberries_480.png");
+   }
 }
+ .arrow__pic {
+  width: rem(20px);
+  height: rem(40px);
+  transform: rotate(90deg); 
+  @include tablets {
+    margin-right: rem(50px);
+    margin-top: rem(12px);
+  }
+  @include phone {
+    margin-right: rem(10px);
+  }
  }
+ .arrow_left {
+   transform: rotate(270deg); 
+   @include tablets {
+     margin-right: 0;
+     margin-left: rem(50px);
+   }
+   @include phone {
+     margin-left: rem(10px);
+   }
+ }
+ .arrow {
+  height: rem(50px);
+  align-self: center;
+} 

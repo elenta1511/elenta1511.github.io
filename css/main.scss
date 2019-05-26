@@ -20,7 +20,10 @@
 @import "adaptive/feedback_ad.scss";
 @import "adaptive/map_ad.scss";
 @import "adaptive/footer_ad.scss";
-@import "layout/mixins.scss";
+
+//breakpoints
+$tablets:768px;
+$phones:480px;
 
 
 
