@@ -1,3 +1,20 @@
+@function rem($px) {
+  @return ($px/16px) * 1rem;
+}
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tablets {
+  @media screen and (max-width: $tablets), (max-width: 1099px) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phones), (max-width: 480px) {
+    @content;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -5,49 +22,73 @@
 }
 
 .form__wrap {
-  width: 940px;
+  width: rem(940px);
   display: flex;
   justify-content: space-between;
   z-index: 1;
+  @include tablets {
+    width: rem(460px);
+    flex-direction: column;
+  }
+  @include phones {
+    width: rem(290px);
+  }
 }
 
 .title_form {
   color: #0f5a47;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
+  @include phones {
+    font-size: rem(26px);
+    margin-bottom: rem(30px);
+  }
 }
 
 .form__coll {
-  width: 460px;
+  width: rem(460px);
+  @include phones {
+    width: rem(290px);
+  }
 }
 
 .form__row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 21px;
+  margin-bottom: rem(21px);
 }
 
 .label__input {
-  height: 60px;
-  width: 220px;
+  height: rem(60px);
+  width: rem(220px);
+  @include phones {
+    width: rem(140px);
+    height: rem(40px);
+  }
   
 }
 
 .label__textarea {
-  width: 460px;
-  height: 183px;
+  width: rem(460px);
+  height: rem(183px);
   resize: none;
-  padding-top: 5px;
+  padding-top: rem(5px);
+  @include phones {
+   width: rem(290px);
+   height: rem(90px);
+  }
 }
 
 .label__textarea,
 .label__input {
   outline: none;
   border: 1px solid  #ffffff;
-  padding-left: 10px;
+  padding-left: rem(10px);
   font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: rem(18px);
   color: black;
- 
+ @include phones {
+   font-size: rem(16px);
+ }
 }
 
 .label__textarea:focus,
@@ -62,18 +103,28 @@
 
 .form_number {
   input {
-    width: 99px;
+    width: rem(99px);
+    @include phones {
+      width: rem(66px);
+    }
   }
 }
 
 .form_street {
   input {
-    width: 460px;
+    width: rem(460px);
+    @include phones {
+      width: rem(290px);
+    }
   }
 }
 
 .radio__wrap {
-  margin: 10px 0;
+  margin: rem(10px) 0;
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .radio {
@@ -85,7 +136,7 @@
 }
 
 .radio__wrap_item {
-  margin-right: 22px;
+  margin-right: rem(22px);
 }
 
 .radio__content {
@@ -93,11 +144,11 @@
 }
 
 .radio__btn {
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     background-color: #ffffff;
     border-radius: 50%;
-    margin-right: 6px;
+    margin-right: rem(6px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,8 +156,8 @@
 
 .radio__btn::before {
   display: block;
-  height: 12px;
-  width: 12px;
+  height: rem(12px);
+  width: rem(12px);
   border-radius: 50%;
   background-color: #0f5a47;
   content: '';
@@ -120,7 +171,11 @@
 
 .checkbox {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .checkbox__input {
@@ -133,13 +188,16 @@
 }
 
 .checkbox__btn {
-  height: 25px;
-  width: 25px;
+  height: rem(25px);
+  width: rem(25px);
   background-color: #ffffff;
-  margin-right: 6px;
+  margin-right: rem(6px);
   display: flex;
   justify-content: center;
   align-items: center;
+  @include phones {
+    height: rem(22.4px);
+  }
 }
 
 .checkbox__btn::before {
@@ -154,6 +212,9 @@
 
 .btn {
   display: flex;
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .btn_clear {
@@ -161,7 +222,7 @@
   background-color: transparent;
   border: 0;
   font-family: 'AlegreyaSans-Regular';
-  font-size: 18px;
+  font-size: rem(18px);
   text-transform: none;
   &:hover {
     background-color: transparent;
@@ -172,11 +233,14 @@
 .radio__text,
 .checkbox__text {
   font-family: 'AlegreyaSans-Regular';
-  font-size: 18px;
+  font-size: rem(18px);
   color: #0f5a47;
   align-self: center;
 }
 
 .label__text {
-  margin-bottom: 7px;
+  margin-bottom: rem(7px);
+  @include phones {
+    font-size: rem(16px);
+  }
 }
