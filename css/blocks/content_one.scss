@@ -1,0 +1,264 @@
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tablets {
+  @media screen and (max-width: $tablets), (max-width: 1099px) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phones), (max-width: 480px) {
+    @content;
+  }
+}
+.hero {
+  @include tablets {
+    background-color: #61c4d9;
+    background-image: url('../img/background_760.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include phones {
+    background-color: #61c4d9;
+    background-image: url('../img/background_480.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4.125rem;
+
+  @include tablets {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.container_hero {
+  @include tablets {
+    background-image: url('../img/chocco760_min.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 70%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    align-items: center;
+    margin-bottom: 25%;
+  }
+
+  @include phones {
+    margin-top: 30%;
+    margin-bottom: 0;
+  }
+
+  &_title {
+    font-size: 3.75rem;
+    color: #ffffff;
+    line-height: 3.75rem;
+    margin: 0 0 .3125rem;
+
+    @include phones {
+      font-size: 2rem;
+      line-height: .8;
+    }
+  }
+
+  &__text {
+    font-family: 'AlegreyaSans-Regular';
+    font-size: 1.3125rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+
+    @include phones {
+      font-size: .8rem;
+      margin-bottom: 1.125rem;
+    }
+  }
+
+  &__button {
+    height: 3.5625rem;
+    margin-bottom: 4.375rem;
+
+    @include tablets {
+      margin-bottom: 3.125rem;
+    }
+
+    @include phones {
+      margin-bottom: 1.125rem;
+    }
+  }
+}
+
+.advant {
+  display: flex;
+
+  @include tablets {
+    margin-top: 5px;
+  }
+
+  @include phones {
+    margin-top: .3125rem;
+    padding: 0 .625rem;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    margin-right: 2.8125rem;
+
+    @include tablets {
+      margin-right: 1rem;
+      display: flex;
+      justify-content: baseline;
+    }
+
+    @include phones {
+      margin-right: 1rem;
+      display: flex;
+      justify-content: baseline;
+    }
+  }
+
+  &__pic-img {
+    stroke: #ffffff;
+    fill: transparent;
+    margin-right: .625rem;
+    height: 50px;
+    width: 50px;
+
+    @include tablets {
+      width: 2.81rem;
+    }
+
+    @include phones {
+      width: 2.81rem;
+    }
+  }
+
+  &__text {
+    font-family: 'AlegreyaSans-Regular';
+    font-size: 1rem;
+    line-height: auto;
+    color: #ffffff;
+
+    @include phones {
+      text-align: left;
+      font-size: .75rem;
+    }
+  }
+}
+
+.main__right {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.button_one {
+  background-color: #ffffff;
+  color: #0f5a47;
+  border: 0;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+
+  @include tablets {
+    position: static;
+  }
+
+  &:hover {
+    background-color: #0f5a47;
+    color: #ffffff;
+  }
+}
+
+.picture_hero::before {
+  content: url("../img/leaves.png");
+  position: absolute;
+  bottom: 15px;
+  right: 26px;
+
+  @include tablets {
+    visibility: hidden;
+    left: -1000px;
+    ;
+  }
+}
+
+.advant__pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include phones {
+    width: 2.5rem;
+  }
+}
+
+.pic_hero::before {
+  content: url("../img/berries.png");
+  position: absolute;
+  bottom: -36px;
+  right: 0;
+  z-index: 1;
+
+  @include tablets {
+    visibility: hidden;
+    left: -1000px;
+    ;
+  }
+}
+
+.header__nav {
+  @include tablets {
+    height: 1.7rem;
+    width: 1.7rem;
+    background-image: url('../img/menu_icon_min.png');
+    background-repeat: no-repeat;
+    align-self: center;
+    position: relative;
+    margin: 0;
+  }
+
+  &-list {
+    @include tablets {
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      justify-content: flex-start;
+      padding-top: 3.75rem;
+    }
+  }
+}
+
+.phone_link {
+  @include tablets {
+    visibility: hidden;
+    position: absolute;
+    top: -1000px;
+  }
+}
