@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <title>CHOCCO</title>
+  <script src="js/js.js" defer></script>
 </head>
 
 <body>
@@ -31,8 +32,9 @@
         <header class="header">
           <div class="header__logo">CHO <br> CCO</div>
           <nav class="header__nav">
-            <div class="close"></div>
-            <ul class="header__nav-list">
+            <a href="#" class="hamburger_menu" id="hamb"></a>
+            <a href="#" class="close" id="cl">&#10006;</a>
+            <ul class="header__nav-list" id="nav">
               <li class="header__nav-item"><a href="#">О нас</a></li>
               <li class="header__nav-item"><a href="#">Батончики</a></li>
               <li class="header__nav-item"><a href="#">Команда</a></li>
@@ -86,7 +88,8 @@
         </div>
       </div>
     </section>
-  
+   
+
     <section class="benefit">
       <div class="container container_benefit">
         <div class="info">
@@ -381,11 +384,9 @@
       <div class="container container_video">
         <div class="video">
           <h2 class="title">как мы работаем</h2>
-          
           <div class="video__content">
             <img src="img/video.jpg" alt="" class="video__content-pic">
           </div>
-          
         </div>
        <div class="blackberry"></div>
       </div>
