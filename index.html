@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="css/main.css">
   <title>CHOCCO</title>
   <script src="js/js.js" defer></script>
+  <script src="js/element.js" defer></script>
+  <script src="js/el.js" defer></script>
+  <script src="js/left.js" defer></script>
+  <script src="js/reviews.js" defer></script>
 </head>
 
 <body>
@@ -151,12 +155,13 @@
   
     <section class="assortment">
       <div class="container container_assortment">
-          <a href="#" class="arrow">
+          <a href="#" class="arrow" id="left">
             <svg class="arrow__pic">
               <use xlink:href="svg/sprite.svg#arrow"></use>
             </svg> 
           </a>
           <div class="slider">
+            <div class="slider__item">
           <div class="slider__one">
             <div class="slider__pic" style="background-image:url('img/slide.png')">
             </div>
@@ -181,11 +186,36 @@
               </div>
             </div>
           </div>
+          <div class="slider__one">
+              <div class="slider__pic" style="background-image:url('img/slide_two.png')">
+              </div>
+              <div class="slider__content">
+                <h2 class="title slider_title">Батончик <span> “гранола
+                  виноград”</span></h2>
+                <div class="slider__content-comp">Состав:</div>
+                <div class="slider__content-text">
+                  Гранола из винограда, грецкого ореха и кунжутных семечек. 
+                  В состав также входят: сухое молоко, заменитель сахара 
+                  и какао бобы.</div>
+                <div class="slider__content-specif">
+                  <div class="slider__content-specif-kkal">Калорийность <br> <span>110 ккал</span></div>
+                  <div class="slider__content-specif-weight">Вес <br> <span>95 грамм</span></div>
+                </div>
+                <div class="slider__content-order">
+                  <div class="slider__content-order-cost">140 ₽</div>
+                  <div class="slider__content-order-button">
+                    <button class="button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
           <div class="slider__content-img"></div>
           <div class="slider__content-img-bluberry"></div> 
-        </div>
+        
           <a href="#" class="arrow">
-            <svg class="arrow__pic arrow_left">
+            <svg class="arrow__pic arrow_left" id="right">
               <use xlink:href="svg/sprite.svg#arrow"></use>
             </svg> 
           </a>
@@ -201,7 +231,7 @@
               <div class="team__photo" style="background-image:url('img/boris.jpg');">
               </div>
               <div class="team__description">
-                <div class="team__description-name"> <a href=""> Борис Федорович</a>
+                <div class="team__description-name"> Борис Федорович
                   <div class="triangle"></div>
                 </div>
                 <div class="team__description-proff">Главный технолог</div>
@@ -212,7 +242,7 @@
               <div class="team__photo" style="background-image:url('img/alla.jpg')" ;>
               </div>
               <div class="team__description">
-                <div class="team__description-name"><a href="">Алла Иванова</a>
+                <div class="team__description-name">Алла Иванова
                   <div class="triangle"></div>
                 </div>
                 <div class="team__description-proff">Специалист по упаковке</div>
@@ -223,18 +253,18 @@
               <div class="team__photo" style="background-image:url('img/kirill.jpg');">
               </div>
               <div class="team__description ">
-                <div class="team__description-name"><a href="">Кирилл Матросов </a>
+                <div class="team__description-name">Кирилл Матросов
                   <div class="triangle"></div>
                 </div>
                 <div class="team__description-proff">Оператор</div>
                 <div class="team__description-text">С радостью поможет подобрать <br>батончики и оформить заказ.</div>
               </div>
             </li>
-            <li class="team__content-item desc_active">
+            <li class="team__content-item">
               <div class="team__photo" style="background-image:url('img/mila.jpg');">
               </div>
               <div class="team__description">
-                <div class="team__description-name"><a href="">Мила Рыжкова</a>
+                <div class="team__description-name">Мила Рыжкова
                   <div class="triangle"></div>
                 </div>
                 <div class="team__description-proff">PR, маркетинг</div>
@@ -256,23 +286,8 @@
         <ul class="accordion__list">
           <li class="accordion__item ">
             <div class="accordion__form">
-              <div class="accordion__form-title" style="background-image:url('img/coco.jpg')" ;> <a href="">Батончики с
-                  молоком </a> </div>
-              <div class="accordion__form-text">
-                Рекомендуем употреблять батончики вместе с кокосовым <br>
-                или миндальным молоком. Так и вкуснее, и полезнее. <br>
-                Ну чего ещё хотеть от жизни? Батончик – он твой лучший <br>
-                друг и радует всех вокруг. Как классно, что можно питаться <br>
-                полезно и вкусно, а не как попало. Бабуля, конечно, за <br>
-                такую еду не похвалит, но кто её будет спрашивать – никто. <br>
-                Надо бы, кстати, бабулю поздравить с Днём Победы.
-              </div>
-            </div>
-          </li>
-          <li class="accordion__item accordion_active">
-            <div class="accordion__form">
-              <div class="accordion__form-title" style="background-image:url('img/granola.jpg');"> <a href="">С мёдом и
-                  фруктами </a> </div>
+              <a href="#" class="accordion__form-title" style="background-image:url('img/coco.jpg')" ;> Батончики с
+                  молоком  </a>
               <div class="accordion__form-text">
                 Рекомендуем употреблять батончики вместе с кокосовым <br>
                 или миндальным молоком. Так и вкуснее, и полезнее. <br>
@@ -286,8 +301,23 @@
           </li>
           <li class="accordion__item">
             <div class="accordion__form">
-              <div class="accordion__form-title" style="background-image:url('img/berries_menu.jpg');"> <a href="">
-                  Дикие ягоды </a> </div>
+              <a href="#" class="accordion__form-title" style="background-image:url('img/granola.jpg');"> С мёдом и
+                  фруктами  </a>
+              <div class="accordion__form-text">
+                Рекомендуем употреблять батончики вместе с кокосовым <br>
+                или миндальным молоком. Так и вкуснее, и полезнее. <br>
+                Ну чего ещё хотеть от жизни? Батончик – он твой лучший <br>
+                друг и радует всех вокруг. Как классно, что можно питаться <br>
+                полезно и вкусно, а не как попало. Бабуля, конечно, за <br>
+                такую еду не похвалит, но кто её будет спрашивать – никто. <br>
+                Надо бы, кстати, бабулю поздравить с Днём Победы.
+              </div>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <div class="accordion__form">
+              <a href="#" class="accordion__form-title" style="background-image:url('img/berries_menu.jpg');"> 
+                  Дикие ягоды  </a>
               <div class="accordion__form-text">
                 Рекомендуем употреблять батончики вместе с кокосовым <br>
                 или миндальным молоком. Так и вкуснее, и полезнее. <br>
@@ -326,7 +356,7 @@
                   <div class="reviews__content-text-name">Алёна Хмельницкая</div>
                 </div>
               </li>
-              <li class="reviews__elem reviews_active">
+              <li class="reviews__elem">
                 <div class="reviews__content-photo" style="background-image:url('img/maria.jpg');">
                 </div>
                 <div class="reviews__content-text">
@@ -367,7 +397,7 @@
                 <div class="reviews__users-img " style="background-image:url('img/alena_min.jpg');"></div>
               </li>
               <li class="reviews__user-item">
-                <div class="reviews__users-img user-active" style="background-image:url('img/maria.jpg');"></div>
+                <div class="reviews__users-img" style="background-image:url('img/maria.jpg');"></div>
               </li>
               <li class="reviews__user-item">
                 <div class="reviews__users-img" style="background-image:url('img/vadim.jpg');"></div>

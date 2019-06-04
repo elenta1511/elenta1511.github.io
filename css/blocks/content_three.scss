@@ -19,10 +19,19 @@ $phones:480px;
 }
 
 .slider {
-display: flex; 
+display: flex;
+width: rem(1000px);
+overflow: hidden; 
+@include tablets {
+  width: rem(396px);
+}
+@include phone {
+  width: rem(290px);
+}
   &__one {
     display: flex;
     justify-content: center;
+    width: rem(1000px);
     @include tablets {
       flex-direction: column;
       align-items: center;
@@ -31,6 +40,11 @@ display: flex;
     @include phone {
       width: rem(290px);
     }
+  }
+  &__item {
+    display: flex;
+    position: relative;
+    transition:  0.7s;
   }
   &__pic {
     background-size: 100%;
@@ -87,6 +101,7 @@ display: flex;
     font-size: rem(18px);
     color: #666666;
     margin-bottom: rem(49px);
+    width: 70%;
     @include tablets {
     font-size: rem(14px);
     width: 85%;

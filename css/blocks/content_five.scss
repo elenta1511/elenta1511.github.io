@@ -58,7 +58,9 @@ $phones: 480px;
   align-items: center;
   font-family: 'AlegreyaSans-Medium';
   font-size: 3rem;
-  justify-content: flex-end;
+  transform: rotate(180deg);
+  padding-top: rem(35px);
+  color: #ffffff;
 
   @include tablets {
     width: 6.1875rem;
@@ -68,12 +70,6 @@ $phones: 480px;
     width: 3.75rem;
     font-size: 2rem;
   }
-}
-
-.accordion__form-title a {
-  transform: rotate(180deg);
-  padding-top: rem(35px);
-  color: #ffffff;
 }
 
 .accordion_active {

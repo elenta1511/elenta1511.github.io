@@ -44,6 +44,7 @@ $phones: 480px;
     display: flex;
     align-items: center;
     margin-right: 2.5rem;
+
     @include tablets {
       margin: 0;
     }
@@ -65,32 +66,35 @@ $phones: 480px;
     @include tablets {
       margin-top: 1.875rem;
     }
+
     @include phones {
       margin-top: rem(24px);
     }
   }
 
-    a {
-      color: #ffffff;
-      font-family: 'AlegreyaSans-Regular';
+  a {
+    color: #ffffff;
+    font-family: 'AlegreyaSans-Regular';
 
-      @include tablets {
-        font-size: 2.5rem;
-      }
-      @include phones {
-        font-size: rem(20px);
-      }
+    @include tablets {
+      font-size: 2.5rem;
     }
 
-    a:hover {
-      color: #0f5a47;
+    @include phones {
+      font-size: rem(20px);
     }
-  
+  }
+
+  a:hover {
+    color: #0f5a47;
+  }
+
 
   &__phone-pic {
     filter: brightness(0) invert(1);
   }
 }
+
 .phone_link {
   font-size: 1.5rem;
   display: flex;
@@ -116,13 +120,19 @@ $phones: 480px;
   display: none;
   top: rem(10px);
   right: rem(40px);
-  @include phones {
-   right: rem(10px);
-   top: rem(5px);
-  }
-} 
 
-.header__nav:hover .header__nav-list {
+  @include phones {
+    right: rem(10px);
+    top: rem(5px);
+  }
+
+  @include tablets {
+    display: none;
+    z-index: 100;
+  }
+}
+
+.header__nav-list {
   @include tablets {
     height: 100vh;
     width: 100vw;
@@ -132,53 +142,43 @@ $phones: 480px;
     opacity: .99;
     z-index: 10;
     text-align: center;
-    visibility: visible;
-  }
-}
-
-.header__nav:hover .close {
-  @include tablets {
-    display: block;
-    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: flex-start;
+    padding-top: 3.75rem;
+    height: 100vh;
+    display: none;
   }
 }
 
 .header__nav {
   .hamburger_menu {
-  @include tablets {
-    height: 1.7rem;
-    width: 1.7rem;
-    background-image: url('../img/menu_icon_min.png');
-    background-repeat: no-repeat;
-    align-self: center;
-    position: relative;
-    margin: 0;
-  }
-  @include phones {
-    height: 1.25rem;
-    width: 1.25rem;
-    background-image: url(../img/menu_icon_min.png);
-    background-repeat: no-repeat;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-    position: relative;
-    margin: 0;
-    background-size: contain;
-  }
-}
-
-  &-list {
     @include tablets {
-      visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      justify-content: flex-start;
-      padding-top: 3.75rem;
+      height: 1.7rem;
+      width: 1.7rem;
+      background-image: url('../img/menu_icon_min.png');
+      background-repeat: no-repeat;
+      align-self: center;
+      position: relative;
+      margin: 0;
+    }
+
+    @include phones {
+      height: 1.25rem;
+      width: 1.25rem;
+      background-image: url(../img/menu_icon_min.png);
+      background-repeat: no-repeat;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+      position: relative;
+      margin: 0;
+      background-size: contain;
     }
   }
 }
+
 .phone_link {
   @include tablets {
     visibility: hidden;

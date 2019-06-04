@@ -1,3 +1,6 @@
+@function rem($px) {
+  @return $px/16px + 0rem;
+}
 //breakpoints
 $tablets: 768px;
 $phones: 480px;
@@ -109,6 +112,7 @@ $phones: 480px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     @include tablets {
       margin-top: 1.6875rem;

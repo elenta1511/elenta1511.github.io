@@ -723,9 +723,13 @@ button:focus {
     .close {
       right: 0.625rem;
       top: 0.3125rem; } }
+  @media screen and (max-width: 768px), (max-width: 1099px) {
+    .close {
+      display: none;
+      z-index: 100; } }
 
 @media screen and (max-width: 768px), (max-width: 1099px) {
-  .header__nav:hover .header__nav-list {
+  .header__nav-list {
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -734,12 +738,20 @@ button:focus {
     opacity: .99;
     z-index: 10;
     text-align: center;
-    visibility: visible; } }
-
-@media screen and (max-width: 768px), (max-width: 1099px) {
-  .header__nav:hover .close {
-    display: block;
-    z-index: 100; } }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-top: 3.75rem;
+    height: 100vh;
+    display: none; } }
 
 @media screen and (max-width: 768px), (max-width: 1099px) {
   .header__nav .hamburger_menu {
@@ -765,22 +777,6 @@ button:focus {
     position: relative;
     margin: 0;
     background-size: contain; } }
-
-@media screen and (max-width: 768px), (max-width: 1099px) {
-  .header__nav-list {
-    visibility: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    position: absolute;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    padding-top: 3.75rem; } }
 
 @media screen and (max-width: 768px), (max-width: 1099px) {
   .phone_link {
@@ -1128,14 +1124,23 @@ button:focus {
 .slider {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 62.5rem;
+  overflow: hidden; }
+  @media screen and (max-width: 768px), (max-width: 1099px) {
+    .slider {
+      width: 24.75rem; } }
+  @media screen and (max-width: 480px) {
+    .slider {
+      width: 18.125rem; } }
   .slider__one {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    width: 62.5rem; }
     @media screen and (max-width: 768px), (max-width: 1099px) {
       .slider__one {
         -webkit-box-orient: vertical;
@@ -1149,6 +1154,14 @@ button:focus {
     @media screen and (max-width: 480px) {
       .slider__one {
         width: 18.125rem; } }
+  .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s; }
   .slider__pic {
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1211,7 +1224,8 @@ button:focus {
     font-family: 'AlegreyaSans-Regular';
     font-size: 1.125rem;
     color: #666666;
-    margin-bottom: 3.0625rem; }
+    margin-bottom: 3.0625rem;
+    width: 70%; }
     @media screen and (max-width: 768px), (max-width: 1099px) {
       .slider__content-text {
         font-size: 0.875rem;
@@ -1418,7 +1432,8 @@ button:focus {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
     @media screen and (max-width: 768px), (max-width: 1099px) {
       .team__description {
         margin-top: 1.6875rem; } }
@@ -1546,9 +1561,11 @@ button:focus {
   align-items: center;
   font-family: 'AlegreyaSans-Medium';
   font-size: 3rem;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding-top: 2.1875rem;
+  color: #ffffff; }
   @media screen and (max-width: 768px), (max-width: 1099px) {
     .accordion__form-title {
       width: 6.1875rem; } }
@@ -1556,13 +1573,6 @@ button:focus {
     .accordion__form-title {
       width: 3.75rem;
       font-size: 2rem; } }
-
-.accordion__form-title a {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  padding-top: 2.1875rem;
-  color: #ffffff; }
 
 .accordion_active {
   width: 100%; }
@@ -1831,7 +1841,7 @@ button:focus {
         height: 5rem;
         width: 5rem; } }
 
-.user-active {
+.user-active .reviews__users-img {
   border: .375rem solid #0f5a47; }
 
 .pic_leaf::before {
