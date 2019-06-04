@@ -120,10 +120,14 @@ $phones: 480px;
    right: rem(10px);
    top: rem(5px);
   }
+  @include tablets {
+    z-index: 100;
+  }
 } 
 
-.header__nav:hover .header__nav-list {
+.header__nav-list {
   @include tablets {
+    display: none;
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -132,16 +136,13 @@ $phones: 480px;
     opacity: .99;
     z-index: 10;
     text-align: center;
-    visibility: visible;
+    flex-direction: column;
+    position: absolute;
+    justify-content: flex-start;
+    padding-top: 3.75rem;
   }
 }
 
-.header__nav:hover .close {
-  @include tablets {
-    display: block;
-    z-index: 100;
-  }
-}
 
 .header__nav {
   .hamburger_menu {
@@ -167,17 +168,6 @@ $phones: 480px;
     background-size: contain;
   }
 }
-
-  &-list {
-    @include tablets {
-      visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      justify-content: flex-start;
-      padding-top: 3.75rem;
-    }
-  }
 }
 .phone_link {
   @include tablets {
