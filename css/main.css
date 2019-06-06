@@ -725,11 +725,18 @@ button:focus {
       top: 0.3125rem; } }
   @media screen and (max-width: 768px), (max-width: 1099px) {
     .close {
+<<<<<<< HEAD
       display: none;
+=======
+>>>>>>> master
       z-index: 100; } }
 
 @media screen and (max-width: 768px), (max-width: 1099px) {
   .header__nav-list {
+<<<<<<< HEAD
+=======
+    display: none;
+>>>>>>> master
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -738,9 +745,12 @@ button:focus {
     opacity: .99;
     z-index: 10;
     text-align: center;
+<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+=======
+>>>>>>> master
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -749,9 +759,13 @@ button:focus {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+<<<<<<< HEAD
     padding-top: 3.75rem;
     height: 100vh;
     display: none; } }
+=======
+    padding-top: 3.75rem; } }
+>>>>>>> master
 
 @media screen and (max-width: 768px), (max-width: 1099px) {
   .header__nav .hamburger_menu {

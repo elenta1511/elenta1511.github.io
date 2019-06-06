@@ -125,6 +125,7 @@ $phones: 480px;
     right: rem(10px);
     top: rem(5px);
   }
+<<<<<<< HEAD
 
   @include tablets {
     display: none;
@@ -132,8 +133,16 @@ $phones: 480px;
   }
 }
 
+=======
+  @include tablets {
+    z-index: 100;
+  }
+} 
+
+>>>>>>> master
 .header__nav-list {
   @include tablets {
+    display: none;
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -142,11 +151,15 @@ $phones: 480px;
     opacity: .99;
     z-index: 10;
     text-align: center;
+<<<<<<< HEAD
     display: flex;
+=======
+>>>>>>> master
     flex-direction: column;
     position: absolute;
     justify-content: flex-start;
     padding-top: 3.75rem;
+<<<<<<< HEAD
     height: 100vh;
     display: none;
   }
@@ -177,6 +190,36 @@ $phones: 480px;
       background-size: contain;
     }
   }
+=======
+  }
+}
+
+
+.header__nav {
+  .hamburger_menu {
+  @include tablets {
+    height: 1.7rem;
+    width: 1.7rem;
+    background-image: url('../img/menu_icon_min.png');
+    background-repeat: no-repeat;
+    align-self: center;
+    position: relative;
+    margin: 0;
+  }
+  @include phones {
+    height: 1.25rem;
+    width: 1.25rem;
+    background-image: url(../img/menu_icon_min.png);
+    background-repeat: no-repeat;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    position: relative;
+    margin: 0;
+    background-size: contain;
+  }
+}
+>>>>>>> master
 }
 
 .phone_link {
