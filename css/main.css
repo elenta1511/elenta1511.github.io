@@ -2147,6 +2147,10 @@ button:focus {
     .label__text {
       font-size: 1rem; } }
 
+.error {
+  color: red;
+  font-size: 0.75rem; }
+
 .footer {
   height: 5.8125rem;
   background-color: #ffffff;

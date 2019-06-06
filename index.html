@@ -12,6 +12,7 @@
   <script src="js/el.js" defer></script>
   <script src="js/left.js" defer></script>
   <script src="js/reviews.js" defer></script>
+  <script src="js/order.js" defer></script>
 </head>
 
 <body>
@@ -431,17 +432,19 @@
               <div class="form__row">
                 <label class="label">
                   <div class="label__text">Имя</div>
-                  <input type="text" class="label__input">
+                  <input type="text" class="label__input" name="name" required>
+                  <div class="error"></div>
                 </label>
                 <label class="label">
                   <div class="label__text">Телефон</div>
-                  <input type="text" class="label__input" placeholder="89022348912">
+                  <input type="text" class="label__input" name="phone" required>
+                  <div class="error"></div>
                 </label>
               </div>
               <div class="form__row form_street">
                 <label class="label">
                   <div class="label__text">Улица</div>
-                  <input type="text" class="label__input">
+                  <input type="text" class="label__input" name="street">
                 </label>
               </div>
               <div class="form__row form_number">
@@ -466,7 +469,8 @@
             <div class="form__coll">
               <label class="label">
                 <div class="label__text">Комментарий</div>
-                <textarea class="label__textarea"></textarea>
+                <textarea class="label__textarea" name="comment" required></textarea>
+                <div class="error"></div>
               </label>
               <div class="radio__wrap">
                 <ul class="radio__wrap_list">
@@ -498,7 +502,7 @@
                 </div>
               </label>
               <div class="btn">
-                <input type="submit" class="button" value="заказать">
+              <input type="submit" class="button" value="заказать" id="send">
                 <input type="reset" class="button btn_clear" value="очистить">
               </div>
             </div>
