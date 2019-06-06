@@ -152,6 +152,9 @@ $phones: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include phones {
+      height: rem(20px);
+    }
 }
 
 .radio__btn::before {

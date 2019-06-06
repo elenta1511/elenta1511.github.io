@@ -231,34 +231,3 @@ $phones: 480px;
     ;
   }
 }
-
-.header__nav {
-  @include tablets {
-    height: 1.7rem;
-    width: 1.7rem;
-    background-image: url('../img/menu_icon_min.png');
-    background-repeat: no-repeat;
-    align-self: center;
-    position: relative;
-    margin: 0;
-  }
-
-  &-list {
-    @include tablets {
-      visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      justify-content: flex-start;
-      padding-top: 3.75rem;
-    }
-  }
-}
-
-.phone_link {
-  @include tablets {
-    visibility: hidden;
-    position: absolute;
-    top: -1000px;
-  }
-}
