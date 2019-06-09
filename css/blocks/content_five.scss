@@ -98,9 +98,24 @@ $phones: 480px;
   }
 }
 
+.accordion__form-text{
+  p {
+    opacity: 0;
+  }
+}
+
 .accordion_active {
   .accordion__form-text {
     padding: 3.4375rem 0 0 1.875rem;
+  }
+}
+
+.accordion_active {
+  .accordion__form-text {
+    p {
+      opacity: 1;
+      transition: opacity 5s;
+    }
   }
 }
 

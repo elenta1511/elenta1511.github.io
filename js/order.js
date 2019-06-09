@@ -21,16 +21,20 @@ send.addEventListener('click', event => {
   xhr.addEventListener('load',() => {
     document.querySelector('.form').reset();
     if(xhr.response.status == 1) {
+      document.body.style.overflow = "hidden";
      document.querySelector('.popap-order__text').textContent = "Ваш заказ успешно доставлен";
      popap.classList.add('popap-order_active');
      btn.addEventListener('click', e => {
       popap.classList.remove('popap-order_active');
+      document.body.style.overflow = "";
      });
     } else { 
+      document.body.style.overflow = "hidden";
       popap.classList.add('popap-order_active');
       document.querySelector('.popap-order__text').textContent = "Произошла ошибка, пожалуйста попробуйте позднее";
       btn.addEventListener('click', e => {
        popap.classList.remove('popap-order_active');
+       document.body.style.overflow = "";
       });
     }
   });

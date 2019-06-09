@@ -6,7 +6,7 @@ $tablets: 768px;
 $phones: 480px;
 
 @mixin tablets {
-  @media screen and (max-width: $tablets), (max-width: 1099px) {
+  @media screen and (max-width: $tablets), (max-width: 950px) {
     @content;
   }
 }
@@ -38,6 +38,9 @@ $phones: 480px;
 .title_form {
   color: #0f5a47;
   margin-bottom: rem(50px);
+  @include tablets {
+    margin-bottom: rem(18px);
+  }
   @include phones {
     font-size: rem(26px);
     margin-bottom: rem(30px);
@@ -60,6 +63,9 @@ $phones: 480px;
 .label__input {
   height: rem(60px);
   width: rem(220px);
+  @include tablets {
+    height: rem(44px);
+  }
   @include phones {
     width: rem(140px);
     height: rem(40px);
@@ -72,6 +78,9 @@ $phones: 480px;
   height: rem(183px);
   resize: none;
   padding-top: rem(5px);
+  @include tablets {
+    height: rem(87px);
+  }
   @include phones {
    width: rem(290px);
    height: rem(90px);
@@ -178,6 +187,7 @@ $phones: 480px;
   @include tablets {
     display: flex;
     justify-content: center;
+    margin-bottom: rem(20px);
   }
 }
 

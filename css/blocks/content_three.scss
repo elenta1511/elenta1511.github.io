@@ -47,13 +47,13 @@ max-width: rem(940px);
     background-position: 49% 0%;
     margin-right: rem(25px);
     @include tablets {
-      height: rem(334px);
-      width: 50%;
+      height: rem(300px);
+      width: 100%;
+      max-width: rem(350px);
       margin-right: 0;
-      margin-bottom: rem(15px);
     }
     @include phone {
-      width: 86%;
+      width: 70%;
       height: rem(250px);
     }
   }
@@ -94,7 +94,7 @@ max-width: rem(940px);
     font-family: 'AlegreyaSans-Regular';
     font-size: rem(18px);
     color: #666666;
-    margin-bottom: rem(49px);
+    margin-bottom: rem(21px);
     width: 80%;
     @include tablets {
     font-size: rem(14px);

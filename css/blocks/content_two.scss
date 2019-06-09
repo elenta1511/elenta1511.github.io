@@ -3,7 +3,7 @@ $tablets: 768px;
 $phones: 480px;
 
 @mixin tablets {
-  @media screen and (max-width: $tablets), (max-width: 1099px) {
+  @media screen and (max-width: $tablets) {
     @content;
   }
 }
@@ -48,8 +48,11 @@ $phones: 480px;
 
 .description {
   display: flex;
-  width: 960px;
+  width: rem(960px);
   justify-content: space-between;
+  @media screen and (max-width: 964px) {
+    width: 90%;
+  }
 
   @include tablets {
     flex-direction: column;
@@ -112,6 +115,9 @@ $phones: 480px;
     font-size: 1.125rem;
     color: #666666;
     text-align: center;
+    @media screen and (max-width: 964px) {
+      font-size: rem(12px);
+    }
 
     @include phones {
       font-size: .75rem;

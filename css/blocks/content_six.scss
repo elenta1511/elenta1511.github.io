@@ -6,7 +6,7 @@ $tablets: 768px;
 $phones: 480px;
 
 @mixin tablets {
-  @media screen and (max-width: $tablets), (max-width: 1099px) {
+  @media screen and (max-width: $tablets) {
     @content;
   }
 }
@@ -35,7 +35,8 @@ $phones: 480px;
     display: flex;
     height: 0;
     overflow: hidden;
-    transition: height 0.3s;
+    opacity: 0;
+    transition: opacity 0.6s;
 
     @include tablets {
       display: flex;
@@ -47,6 +48,7 @@ $phones: 480px;
   &_active {
     overflow: hidden;
     height: rem(310px) ;
+    opacity: 1;
 
     @include tablets {
       height: 100%;
@@ -86,6 +88,9 @@ $phones: 480px;
     display: flex;
     margin: 0 auto;
     position: relative;
+    @media screen and (max-width: 950px) {
+      width: rem(796px);
+    }
 
     @include tablets {
       width: 29.0625rem;
