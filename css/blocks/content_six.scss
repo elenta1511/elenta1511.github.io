@@ -34,7 +34,8 @@ $phones: 480px;
   &__elem {
     display: flex;
     height: 0;
-    visibility: hidden;
+    overflow: hidden;
+    transition: height 0.3s;
 
     @include tablets {
       display: flex;
@@ -44,8 +45,8 @@ $phones: 480px;
   }
 
   &_active {
-    visibility: visible;
-    height: 16.5625rem;
+    overflow: hidden;
+    height: rem(310px) ;
 
     @include tablets {
       height: 100%;
@@ -214,6 +215,7 @@ $phones: 480px;
   justify-content: center;
   align-items: center;
   margin-top: 2.75rem;
+  cursor: pointer;
 
   @include phones {
     margin-top: 1rem;
@@ -243,10 +245,11 @@ $phones: 480px;
     }
   }
 
-  &-img {
+  &-img  {
     width: 6.125rem;
     height: 6.125rem;
     border-radius: 50%;
+    background-origin: border-box;
 
     @include phones {
       height: 5rem;
@@ -265,9 +268,11 @@ $phones: 480px;
   position: absolute;
   top: 70%;
   left: 0;
+  
 
   @media screen and (max-width:480px) {
     opacity: 0;
+    left: -1000px;
   }
 }
 
@@ -279,6 +284,7 @@ $phones: 480px;
 
   @media screen and (max-width:480px) {
     opacity: 0;
+    left: -1000px;
   }
 }
 

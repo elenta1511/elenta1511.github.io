@@ -12,6 +12,9 @@ $phones: 480px;
     @content;
   }
 }
+@function rem($px) {
+  @return ($px/16px) * 1rem;
+}
 
 * {
   box-sizing: border-box;
@@ -201,3 +204,4 @@ button:focus {
   background-repeat: no-repeat;
   background-size: cover;
 }
+

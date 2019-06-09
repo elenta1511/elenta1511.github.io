@@ -1,33 +1,49 @@
-const left = document.querySelector("#left");
-const right = document.querySelector("#right");
-const items = document.querySelector(".slider__item");
-var item = document.querySelector('.slider__one');
-right.addEventListener("click", function (e) {
-  e.preventDefault();
-  let motionRight = parseInt(getComputedStyle(items).right);
-  if (!motionRight) {
-    motionRight = 0;
-  }
-  ;
-  if (motionRight < item.offsetWidth) {
-    items.style.right = motionRight + item.offsetWidth + 'px';
-  }
-  else {
-    items.style.right = 0;
-  }
-  ;
+
+
+window.scrollBy(0,1);
+addEventListener("load", function () {
+const item=document.querySelector(".slider__item");
+var step = item.firstElementChild.getBoundingClientRect().width;
+const arrowLeft=document.querySelector("#left");
+const arrowRight=document.querySelector("#right");
+const slidesInView=1; 
+const maxRight=(item.children.length-slidesInView)*step;
+const minRight=0; 
+let currentRight = 0;
+
+arrowRight.addEventListener('click', function(event) {
+  event.preventDefault();
+if (currentRight < maxRight){
+  currentRight += step;
+  item.style.right=`${currentRight}px`;
+} else {
+  currentRight=0;
+  item.style.right=0;
+}
 });
-left.addEventListener("click", function (e) {
-  e.preventDefault();
-  let motionRight = parseInt(getComputedStyle(items).right);
-  if (!motionRight) {
-    motionRight = 0;
+arrowLeft.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (currentRight > minRight){
+    currentRight -= step;
+    item.style.right=`${currentRight}px`;
+  } else {
+  currentRight=maxRight;
+  item.style.right=maxRight + 'px';
   }
-  if (motionRight > 0) {
-    items.style.right = motionRight - item.offsetWidth + 'px';
-  }
-  else {
-    items.style.right = +item.offsetWidth + 'px';
-  }
-  ;
+  });
 });
+
+
+
+
+
+
+
+ /* window.scrollBy(0,1);
+  addEventListener("load", function () {
+      var item = document.querySelector('.slider__item');
+      var step = item.firstElementChild.getBoundingClientRect().width;
+      console.log(step);
+      console.log(step.clientWidth);
+      console.log(step.getBoundingClientRect().width);
+  });*/

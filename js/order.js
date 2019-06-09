@@ -1,5 +1,8 @@
 const myForm = document.querySelector('.form');
 const send = document.querySelector('#send');
+const popap =  document.querySelector('.popap-order');
+const btn = document.querySelector('.btn-popap');
+var url = ['https://webdev-api.loftschool.com/sendmail'];
 send.addEventListener('click', event => {
  event.preventDefault();
  if(validateForm(myForm)) {
@@ -10,16 +13,26 @@ send.addEventListener('click', event => {
   formData.append('to', 'elenta1511@gmail.com');
   var xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
-  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+  xhr.open('POST', url);
+  setTimeout (filt, 10);
+  function filt() {url[0] = 'https://webdev-api.loftschool.com/sendmail/fail';}
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   xhr.send(formData);
   xhr.addEventListener('load',() => {
+    document.querySelector('.form').reset();
     if(xhr.response.status == 1) {
-      alert ("Ваш заказ успешно отправлен");
-      alert.addEventListener('click',function(){
+     document.querySelector('.popap-order__text').textContent = "Ваш заказ успешно доставлен";
+     popap.classList.add('popap-order_active');
+     btn.addEventListener('click', e => {
+      popap.classList.remove('popap-order_active');
+     });
+    } else { 
+      popap.classList.add('popap-order_active');
+      document.querySelector('.popap-order__text').textContent = "Произошла ошибка, пожалуйста попробуйте позднее";
+      btn.addEventListener('click', e => {
+       popap.classList.remove('popap-order_active');
       });
-    } else alert('Ваш заказ не отправлен, пожалуйста попробуйте позднее');
-    
+    }
   });
   }
 });
@@ -49,13 +62,3 @@ function validateField(label) {
 }
 
 
-//var myF = new formData();
-  //myF.append('name', myForm.elements.name.value);
-//  myF.append('phone', myForm.elements.phone.value);
-//  myF.append('comment', myForm.elements.comment.value);
-//  myF.append('to', 'elenta1511@gmail.com');
-//  var xhr = new XMLHttpRequest();
-//  xhr.responseType = 'json';
-//  xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
-//  xhr.send(formD);
-// return xhr;

@@ -19,16 +19,14 @@ $phones: 480px;
   display: flex;
   height: 100vh;
   min-height: rem(650px);
-
-  @include tablets {
-    position: relative;
-  }
+  position: relative;
 }
 
 .accordion_title {
   color: #ffffff;
   padding-top: 6.4375rem;
   padding-left: 4.9375rem;
+  padding-right: 4.9375rem;
 
   @include phones {
     font-size: 1.75rem;
@@ -38,15 +36,15 @@ $phones: 480px;
 .accordion__list {
   display: flex;
   justify-content: flex-end;
-  flex: 1;
-
-  @include tablets {
-    width: 100vw;
-  }
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
-.accordion__form {
-  display: flex;
+.accordion_active {
+  width: 70%;
+  transition: width 0.2s;
 }
 
 .accordion__form-title {
@@ -61,19 +59,21 @@ $phones: 480px;
   transform: rotate(180deg);
   padding-top: rem(35px);
   color: #ffffff;
+  position: relative;
 
   @include tablets {
     width: 6.1875rem;
   }
 
   @include phones {
-    width: 3.75rem;
-    font-size: 2rem;
+    width: rem(40px);
+    font-size: rem(22px);
   }
 }
 
 .accordion_active {
   width: 100%;
+  
 
   @include tablets {
     position: absolute;
@@ -92,7 +92,7 @@ $phones: 480px;
   line-height: 1.5rem;
   width: 0;
   overflow: hidden;
-
+  transition: width 0.6s;
   @include phones {
     font-size: .625rem;
   }
@@ -101,7 +101,6 @@ $phones: 480px;
 .accordion_active {
   .accordion__form-text {
     padding: 3.4375rem 0 0 1.875rem;
-    width: 100%;
   }
 }
 
@@ -116,4 +115,30 @@ $phones: 480px;
   }
 }
  
+.accordion__item {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
 
+.accordion_active {
+  .accordion__item {
+    width: 100%;
+    
+  }
+}
+
+.animation {
+  animation: box 1s;
+
+}
+
+  
+@keyframes box {
+  from {transform:translateX(100%);
+  width: 100%;}
+  to {transform:translateX(0%);
+  width: 100%;}
+ }
+
+ 

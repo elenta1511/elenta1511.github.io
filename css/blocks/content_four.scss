@@ -29,6 +29,7 @@ $phones: 480px;
 
   &__content-item {
     height: 26.25rem;
+    
 
     @include tablets {
       width: 50%;
@@ -113,6 +114,7 @@ $phones: 480px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+  
 
     @include tablets {
       margin-top: 1.6875rem;
@@ -127,6 +129,7 @@ $phones: 480px;
       font-size: 1.3125rem;
       margin-bottom: .875rem;
       display: flex;
+      transition: height 0.4s;
 
       @include phones {
         margin-bottom: .1875rem;
@@ -145,6 +148,7 @@ $phones: 480px;
       color: #281e1e;
       height: 0;
       overflow: hidden;
+      transition: height 0.4s;
 
       @include phones {
         font-size: .875rem;
@@ -158,6 +162,7 @@ $phones: 480px;
       text-align: center;
       height: 0;
       overflow: hidden;
+      transition: height 0.3s;
 
       @include phones {
         font-size: .75rem;
