@@ -73,3 +73,8 @@ $phones: 480px;
     display: flex;
   }
 }
+.maincontent {
+  height: 100vh;
+  will-change: transform;
+ transition: transform 1s;
+}
