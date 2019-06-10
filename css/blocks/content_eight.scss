@@ -6,7 +6,7 @@ $tablets: 768px;
 $phones: 480px;
 
 @mixin tablets {
-  @media screen and (max-width: $tablets), (max-width: 1099px) {
+  @media screen and (max-width: $tablets), (max-width: 950px) {
     @content;
   }
 }
@@ -38,6 +38,9 @@ $phones: 480px;
 .title_form {
   color: #0f5a47;
   margin-bottom: rem(50px);
+  @include tablets {
+    margin-bottom: rem(18px);
+  }
   @include phones {
     font-size: rem(26px);
     margin-bottom: rem(30px);
@@ -60,6 +63,9 @@ $phones: 480px;
 .label__input {
   height: rem(60px);
   width: rem(220px);
+  @include tablets {
+    height: rem(44px);
+  }
   @include phones {
     width: rem(140px);
     height: rem(40px);
@@ -72,6 +78,9 @@ $phones: 480px;
   height: rem(183px);
   resize: none;
   padding-top: rem(5px);
+  @include tablets {
+    height: rem(87px);
+  }
   @include phones {
    width: rem(290px);
    height: rem(90px);
@@ -178,6 +187,7 @@ $phones: 480px;
   @include tablets {
     display: flex;
     justify-content: center;
+    margin-bottom: rem(20px);
   }
 }
 
@@ -246,4 +256,62 @@ $phones: 480px;
   @include phones {
     font-size: rem(16px);
   }
+}
+
+.error {
+  color:red;
+  font-size: rem(12px);
+  position: absolute;
+}
+.popap-order {
+  position: fixed;
+  opacity: 0;
+}
+.popap-order_active {
+  z-index: 100;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.overlay {
+  background-color: rgba(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popap-order__form {
+  display: flex;
+  flex-direction: column;
+  height: rem(150px);
+  padding: rem(5px);
+  width: rem(300px);
+  background-color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: rem(5px);
+}
+.popap-order__text {
+  font-size: rem(18px);
+  font-family: 'AlegreyaSans-Medium';
+  margin-bottom: rem(30px);
+}
+.btn-popap {
+  height: rem(40px);
+  width: rem(90px);
+  background-color: #0b4d3c;
+  color: white;
+  font-size: rem(12px);
+  font-family: 'AlegreyaSans-ExtraBold';
+  border-radius: rem(5px);
+  border: 1px solid #0b4d3c;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

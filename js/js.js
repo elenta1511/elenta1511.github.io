@@ -12,3 +12,4 @@ const close = document.querySelector('.close');
 hambMenu.addEventListener('click',open);
 close.addEventListener('click', cl);
 
+

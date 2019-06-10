@@ -374,7 +374,7 @@ template {
 
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
   height: 100vh;
   display: -webkit-box;
@@ -385,10 +385,10 @@ template {
   justify-content: center; }
   @media (max-width: 768px) {
     .container {
-      min-height: 1024px; } }
+      min-height: 64rem; } }
   @media (max-width: 480px) {
     .container {
-      min-height: 568px; } }
+      min-height: 35.5rem; } }
 
 .container_hero {
   display: -webkit-box;
@@ -1003,7 +1003,7 @@ button:focus {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px) {
     .info {
       padding-top: 2.75rem; } }
   @media screen and (max-width: 480px), (max-width: 480px) {
@@ -1028,11 +1028,14 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 960px;
+  width: 60rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 964px) {
+    .description {
+      width: 90%; } }
+  @media screen and (max-width: 768px) {
     .description {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -1054,7 +1057,7 @@ button:focus {
     -ms-flex-align: center;
     align-items: center;
     margin: 1.9375rem auto; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px) {
       .description__icon {
         height: 7.68rem;
         width: 7.68rem;
@@ -1084,7 +1087,7 @@ button:focus {
     font-family: 'AlegreyaSans-Bold';
     font-size: 1.6875rem;
     margin-bottom: 1.4375rem; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px) {
       .description__container-title {
         margin-bottom: 1rem; } }
     @media screen and (max-width: 480px), (max-width: 480px) {
@@ -1096,11 +1099,14 @@ button:focus {
     font-size: 1.125rem;
     color: #666666;
     text-align: center; }
+    @media screen and (max-width: 964px) {
+      .description__container-text {
+        font-size: 0.75rem; } }
     @media screen and (max-width: 480px), (max-width: 480px) {
       .description__container-text {
         font-size: .75rem; } }
 
-@media screen and (max-width: 768px), (max-width: 1099px) {
+@media screen and (max-width: 768px) {
   .img {
     position: absolute;
     left: 0;
@@ -1112,21 +1118,24 @@ button:focus {
   position: absolute;
   left: 0;
   z-index: 1; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px) {
     .img::before {
       content: url("../img/raspberries_480.png"); } }
 
 .slider {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  overflow: hidden;
+  max-width: 58.75rem; }
   .slider__one {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    min-width: 100%; }
     @media screen and (max-width: 768px), (max-width: 1099px) {
       .slider__one {
         -webkit-box-orient: vertical;
@@ -1135,26 +1144,35 @@ button:focus {
         flex-direction: column;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center;
-        width: 24.75rem; } }
-    @media screen and (max-width: 480px) {
-      .slider__one {
-        width: 18.125rem; } }
+        align-items: center; } }
+  .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    right: 0;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-transition: right 0.5s;
+    -o-transition: right 0.5s;
+    transition: right 0.5s;
+    height: 100%;
+    width: 100%; }
   .slider__pic {
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 30rem;
+    width: 70%;
     background-position: 49% 0%;
     margin-right: 1.5625rem; }
     @media screen and (max-width: 768px), (max-width: 1099px) {
       .slider__pic {
-        height: 20.9375rem;
-        width: 23.25rem;
-        margin-right: 0;
-        margin-bottom: 0.9375rem; } }
+        height: 18.75rem;
+        width: 100%;
+        max-width: 21.875rem;
+        margin-right: 0; } }
     @media screen and (max-width: 480px) {
       .slider__pic {
-        width: 17.625rem;
+        width: 70%;
         height: 15.625rem; } }
   .slider__content {
     width: 50%; }
@@ -1202,15 +1220,16 @@ button:focus {
     font-family: 'AlegreyaSans-Regular';
     font-size: 1.125rem;
     color: #666666;
-    margin-bottom: 3.0625rem; }
+    margin-bottom: 1.3125rem;
+    width: 80%; }
     @media screen and (max-width: 768px), (max-width: 1099px) {
       .slider__content-text {
         font-size: 0.875rem;
-        width: 85%; } }
+        width: 60%; } }
     @media screen and (max-width: 480px) {
       .slider__content-text {
         font-size: 0.75rem;
-        width: 100%; } }
+        width: 60%; } }
   .slider__content-specif {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1316,15 +1335,12 @@ button:focus {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
-    .team {
-      padding-top: 3.5625rem; } }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .team {
       padding-top: 1.5625rem; } }
   .team__content-item {
     height: 26.25rem; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px), (max-width: 950px) {
       .team__content-item {
         width: 50%;
         height: 50%; } }
@@ -1339,9 +1355,10 @@ button:focus {
   .team_title {
     margin-bottom: 4.75rem;
     text-align: center; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px), (max-width: 950px) {
       .team_title {
-        margin-bottom: 3.5625rem; } }
+        margin-bottom: 1.5625rem;
+        font-size: 2.5rem; } }
     @media screen and (max-width: 480px), (max-width: 480px) {
       .team_title {
         margin-bottom: 1.25rem;
@@ -1359,7 +1376,7 @@ button:focus {
     align-items: center;
     width: 58.75rem;
     margin: 0 5rem; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px), (max-width: 950px) {
       .team__content {
         -ms-flex-flow: wrap;
         flex-flow: wrap;
@@ -1383,10 +1400,10 @@ button:focus {
     height: 18.125rem;
     width: 13.75rem;
     background-position: center; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px), (max-width: 950px) {
       .team__photo {
-        height: 14.625rem;
-        width: 11.25rem;
+        height: 11.625rem;
+        width: 10.25rem;
         margin: 0 auto;
         background-size: cover;
         margin: 0 auto; } }
@@ -1409,10 +1426,11 @@ button:focus {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    align-items: center;
+    cursor: pointer; }
+    @media screen and (max-width: 768px), (max-width: 950px) {
       .team__description {
-        margin-top: 1.6875rem; } }
+        margin-top: 0.6875rem; } }
     @media screen and (max-width: 480px), (max-width: 480px) {
       .team__description {
         margin-top: .625rem; } }
@@ -1422,7 +1440,10 @@ button:focus {
       margin-bottom: .875rem;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-transition: height 0.4s;
+      -o-transition: height 0.4s;
+      transition: height 0.4s; }
       @media screen and (max-width: 480px), (max-width: 480px) {
         .team__description-name {
           margin-bottom: .1875rem;
@@ -1435,7 +1456,10 @@ button:focus {
       margin-bottom: 5px;
       color: #281e1e;
       height: 0;
-      overflow: hidden; }
+      overflow: hidden;
+      -webkit-transition: height 0.4s;
+      -o-transition: height 0.4s;
+      transition: height 0.4s; }
       @media screen and (max-width: 480px), (max-width: 480px) {
         .team__description-proff {
           font-size: .875rem; } }
@@ -1445,7 +1469,13 @@ button:focus {
       font-size: 1.125rem;
       text-align: center;
       height: 0;
-      overflow: hidden; }
+      overflow: hidden;
+      -webkit-transition: height 0.3s;
+      -o-transition: height 0.3s;
+      transition: height 0.3s; }
+      @media screen and (max-width: 768px), (max-width: 950px) {
+        .team__description-text {
+          font-size: 0.9rem; } }
       @media screen and (max-width: 480px), (max-width: 480px) {
         .team__description-text {
           font-size: .75rem; } }
@@ -1454,7 +1484,7 @@ button:focus {
   height: 1.1875rem; }
 
 .desc_active .team__description-text {
-  height: 3.4375rem; }
+  height: 3.7rem; }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .desc_active .team__description-text {
       height: 2.9rem; } }
@@ -1470,7 +1500,7 @@ button:focus {
   left: 0;
   bottom: -40px;
   z-index: 10; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px), (max-width: 950px) {
     .raspberries::before {
       content: url("../img/raspberry_480.png"); } }
 
@@ -1490,15 +1520,14 @@ button:focus {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  min-height: 40.625rem; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
-    .accordion {
-      position: relative; } }
+  min-height: 40.625rem;
+  position: relative; }
 
 .accordion_title {
   color: #ffffff;
   padding-top: 6.4375rem;
-  padding-left: 4.9375rem; }
+  padding-left: 4.9375rem;
+  padding-right: 4.9375rem; }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .accordion_title {
       font-size: 1.75rem; } }
@@ -1510,17 +1539,16 @@ button:focus {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
-    .accordion__list {
-      width: 100vw; } }
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0; }
 
-.accordion__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+.accordion_active {
+  width: 70%;
+  -webkit-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s; }
 
 .accordion__form-title {
   width: 6.1875rem;
@@ -1537,23 +1565,19 @@ button:focus {
   align-items: center;
   font-family: 'AlegreyaSans-Medium';
   font-size: 3rem;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding-top: 2.1875rem;
+  color: #ffffff;
+  position: relative; }
   @media screen and (max-width: 768px), (max-width: 1099px) {
     .accordion__form-title {
       width: 6.1875rem; } }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .accordion__form-title {
-      width: 3.75rem;
-      font-size: 2rem; } }
-
-.accordion__form-title a {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  padding-top: 2.1875rem;
-  color: #ffffff; }
+      width: 2.5rem;
+      font-size: 1.375rem; } }
 
 .accordion_active {
   width: 100%; }
@@ -1572,14 +1596,25 @@ button:focus {
   font-size: 1rem;
   line-height: 1.5rem;
   width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: width 0.6s;
+  -o-transition: width 0.6s;
+  transition: width 0.6s; }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .accordion__form-text {
       font-size: .625rem; } }
 
+.accordion__form-text p {
+  opacity: 0; }
+
 .accordion_active .accordion__form-text {
-  padding: 3.4375rem 0 0 1.875rem;
-  width: 100%; }
+  padding: 3.4375rem 0 0 1.875rem; }
+
+.accordion_active .accordion__form-text p {
+  opacity: 1;
+  -webkit-transition: opacity 5s;
+  -o-transition: opacity 5s;
+  transition: opacity 5s; }
 
 @media screen and (max-width: 768px), (max-width: 1099px) {
   .menu,
@@ -1591,6 +1626,40 @@ button:focus {
   .accordion {
     min-height: 35.5rem; } }
 
+.accordion__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  position: relative; }
+
+.accordion_active .accordion__item {
+  width: 100%; }
+
+.animation {
+  -webkit-animation: box 1s;
+  animation: box 1s; }
+
+@-webkit-keyframes box {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    width: 100%; }
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    width: 100%; } }
+
+@keyframes box {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    width: 100%; }
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    width: 100%; } }
+
 .circle {
   height: 2rem;
   width: 4.6875rem;
@@ -1599,7 +1668,7 @@ button:focus {
   border-bottom-right-radius: 2rem;
   position: absolute;
   margin-left: 45%; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px) {
     .circle {
       margin: 0; } }
 
@@ -1608,8 +1677,12 @@ button:focus {
   display: -ms-flexbox;
   display: flex;
   height: 0;
-  visibility: hidden; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+  @media screen and (max-width: 768px) {
     .reviews__elem {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1623,9 +1696,10 @@ button:focus {
       align-items: center; } }
 
 .reviews_active {
-  visibility: visible;
-  height: 16.5625rem; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  overflow: hidden;
+  height: 19.375rem;
+  opacity: 1; }
+  @media screen and (max-width: 768px) {
     .reviews_active {
       height: 100%; } }
 
@@ -1641,7 +1715,7 @@ button:focus {
 .reviews__title {
   margin-bottom: 3.75rem;
   text-align: center; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px) {
     .reviews__title {
       margin-top: 4.69rem; } }
   @media screen and (max-width: 480px), (max-width: 480px) {
@@ -1658,7 +1732,10 @@ button:focus {
   display: flex;
   margin: 0 auto;
   position: relative; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 950px) {
+    .reviews__content {
+      width: 49.75rem; } }
+  @media screen and (max-width: 768px) {
     .reviews__content {
       width: 29.0625rem;
       height: 37.5rem;
@@ -1690,7 +1767,7 @@ button:focus {
     height: 16.25rem;
     background-position: center;
     background-size: cover; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px) {
       .reviews__content-photo {
         height: 12.5625rem;
         width: 12.5625rem;
@@ -1707,7 +1784,7 @@ button:focus {
   .reviews__content-text {
     margin-top: 4.375rem;
     width: 100%; }
-    @media screen and (max-width: 768px), (max-width: 1099px) {
+    @media screen and (max-width: 768px) {
       .reviews__content-text {
         text-align: center;
         margin-top: 1.69rem; } }
@@ -1727,7 +1804,7 @@ button:focus {
       font-size: 1.875rem;
       color: #323232;
       margin-bottom: 1.8125rem; }
-      @media screen and (max-width: 768px), (max-width: 1099px) {
+      @media screen and (max-width: 768px) {
         .reviews__content-text-title {
           padding: 0 6.25rem; } }
       @media screen and (max-width: 480px), (max-width: 480px) {
@@ -1746,7 +1823,7 @@ button:focus {
       font-size: 1.125rem;
       margin-bottom: 1.8125rem;
       color: #666666; }
-      @media screen and (max-width: 768px), (max-width: 1099px) {
+      @media screen and (max-width: 768px) {
         .reviews__content-text-content {
           padding: 0 2.07rem; } }
       @media screen and (max-width: 480px), (max-width: 480px) {
@@ -1768,7 +1845,7 @@ button:focus {
 .branch {
   margin-left: auto;
   width: 30%; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px) {
     .branch {
       margin: 0;
       position: absolute;
@@ -1788,7 +1865,8 @@ button:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 2.75rem; }
+  margin-top: 2.75rem;
+  cursor: pointer; }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .reviews__users {
       margin-top: 1rem; } }
@@ -1816,13 +1894,14 @@ button:focus {
   .reviews__users-img {
     width: 6.125rem;
     height: 6.125rem;
-    border-radius: 50%; }
+    border-radius: 50%;
+    background-origin: border-box; }
     @media screen and (max-width: 480px), (max-width: 480px) {
       .reviews__users-img {
         height: 5rem;
         width: 5rem; } }
 
-.user-active {
+.user-active .reviews__users-img {
   border: .375rem solid #0f5a47; }
 
 .pic_leaf::before {
@@ -1832,7 +1911,8 @@ button:focus {
   left: 0; }
   @media screen and (max-width: 480px) {
     .pic_leaf::before {
-      opacity: 0; } }
+      opacity: 0;
+      left: -1000px; } }
 
 .pic_berries::before {
   content: url("../img/berries_six.png");
@@ -1841,7 +1921,8 @@ button:focus {
   bottom: -5.5rem; }
   @media screen and (max-width: 480px) {
     .pic_berries::before {
-      opacity: 0; } }
+      opacity: 0;
+      left: -1000px; } }
 
 .video {
   display: -webkit-box;
@@ -1885,7 +1966,7 @@ button:focus {
   -ms-flex-pack: justify;
   justify-content: space-between;
   z-index: 1; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px), (max-width: 950px) {
     .form__wrap {
       width: 28.75rem;
       -webkit-box-orient: vertical;
@@ -1899,6 +1980,9 @@ button:focus {
 .title_form {
   color: #0f5a47;
   margin-bottom: 3.125rem; }
+  @media screen and (max-width: 768px), (max-width: 950px) {
+    .title_form {
+      margin-bottom: 1.125rem; } }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .title_form {
       font-size: 1.625rem;
@@ -1922,6 +2006,9 @@ button:focus {
 .label__input {
   height: 3.75rem;
   width: 13.75rem; }
+  @media screen and (max-width: 768px), (max-width: 950px) {
+    .label__input {
+      height: 2.75rem; } }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .label__input {
       width: 8.75rem;
@@ -1932,6 +2019,9 @@ button:focus {
   height: 11.4375rem;
   resize: none;
   padding-top: 0.3125rem; }
+  @media screen and (max-width: 768px), (max-width: 950px) {
+    .label__textarea {
+      height: 5.4375rem; } }
   @media screen and (max-width: 480px), (max-width: 480px) {
     .label__textarea {
       width: 18.125rem;
@@ -1984,7 +2074,7 @@ button:focus {
 
 .radio__wrap {
   margin: 0.625rem 0; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px), (max-width: 950px) {
     .radio__wrap {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2046,14 +2136,15 @@ button:focus {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 2.5rem; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px), (max-width: 950px) {
     .checkbox {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; } }
+      justify-content: center;
+      margin-bottom: 1.25rem; } }
 
 .checkbox__input {
   opacity: 0;
@@ -2096,7 +2187,7 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media screen and (max-width: 768px), (max-width: 1099px) {
+  @media screen and (max-width: 768px), (max-width: 950px) {
     .btn {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2127,6 +2218,84 @@ button:focus {
   @media screen and (max-width: 480px), (max-width: 480px) {
     .label__text {
       font-size: 1rem; } }
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+  position: absolute; }
+
+.popap-order {
+  position: fixed;
+  opacity: 0; }
+
+.popap-order_active {
+  z-index: 100;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.popap-order__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 9.375rem;
+  padding: 0.3125rem;
+  width: 18.75rem;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.3125rem; }
+
+.popap-order__text {
+  font-size: 1.125rem;
+  font-family: 'AlegreyaSans-Medium';
+  margin-bottom: 1.875rem; }
+
+.btn-popap {
+  height: 2.5rem;
+  width: 5.625rem;
+  background-color: #0b4d3c;
+  color: white;
+  font-size: 0.75rem;
+  font-family: 'AlegreyaSans-ExtraBold';
+  border-radius: 0.3125rem;
+  border: 1px solid #0b4d3c;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer; }
 
 .footer {
   height: 5.8125rem;

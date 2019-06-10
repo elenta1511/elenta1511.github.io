@@ -6,7 +6,7 @@ $tablets: 768px;
 $phones: 480px;
 
 @mixin tablets {
-  @media screen and (max-width: $tablets), (max-width: 1099px) {
+  @media screen and (max-width: $tablets) {
     @content;
   }
 }
@@ -34,7 +34,9 @@ $phones: 480px;
   &__elem {
     display: flex;
     height: 0;
-    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.6s;
 
     @include tablets {
       display: flex;
@@ -44,8 +46,9 @@ $phones: 480px;
   }
 
   &_active {
-    visibility: visible;
-    height: 16.5625rem;
+    overflow: hidden;
+    height: rem(310px) ;
+    opacity: 1;
 
     @include tablets {
       height: 100%;
@@ -85,6 +88,9 @@ $phones: 480px;
     display: flex;
     margin: 0 auto;
     position: relative;
+    @media screen and (max-width: 950px) {
+      width: rem(796px);
+    }
 
     @include tablets {
       width: 29.0625rem;
@@ -214,6 +220,7 @@ $phones: 480px;
   justify-content: center;
   align-items: center;
   margin-top: 2.75rem;
+  cursor: pointer;
 
   @include phones {
     margin-top: 1rem;
@@ -243,10 +250,11 @@ $phones: 480px;
     }
   }
 
-  &-img {
+  &-img  {
     width: 6.125rem;
     height: 6.125rem;
     border-radius: 50%;
+    background-origin: border-box;
 
     @include phones {
       height: 5rem;
@@ -255,7 +263,7 @@ $phones: 480px;
   }
 }
 
-.user-active {
+.user-active .reviews__users-img {
   border: .375rem solid #0f5a47;
 }
 
@@ -265,9 +273,11 @@ $phones: 480px;
   position: absolute;
   top: 70%;
   left: 0;
+  
 
   @media screen and (max-width:480px) {
     opacity: 0;
+    left: -1000px;
   }
 }
 
@@ -279,6 +289,7 @@ $phones: 480px;
 
   @media screen and (max-width:480px) {
     opacity: 0;
+    left: -1000px;
   }
 }
 

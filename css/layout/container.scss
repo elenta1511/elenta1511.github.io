@@ -12,18 +12,22 @@ $phones: 480px;
     @content;
   }
 }
+
+@function rem($px) {
+  @return ($px/16px) *1rem;
+}
 .container {
   width: 100%;
-  max-width: 1100px; 
+  max-width: rem(1100px); 
   margin: 0 auto;
   height: 100vh;
   display: flex;
   justify-content: center;
   @media(max-width:768px){
-    min-height: 1024px;
+    min-height: rem(1024px);
   }
   @media(max-width:480px){
-    min-height: 568px;
+    min-height: rem(568px);
   }
 }
 .container_hero {

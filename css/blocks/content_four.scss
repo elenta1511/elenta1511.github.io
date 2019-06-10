@@ -1,9 +1,12 @@
+@function rem($px) {
+  @return $px/16px + 0rem;
+}
 //breakpoints
 $tablets: 768px;
 $phones: 480px;
 
 @mixin tablets {
-  @media screen and (max-width: $tablets), (max-width: 1099px) {
+  @media screen and (max-width: $tablets), (max-width: 950px) {
     @content;
   }
 }
@@ -16,16 +19,14 @@ $phones: 480px;
   display: flex;
   flex-direction: column;
 
-  @include tablets {
-    padding-top: 3.5625rem;
-  }
-
+  
   @include phones {
     padding-top: 1.5625rem;
   }
 
   &__content-item {
     height: 26.25rem;
+    
 
     @include tablets {
       width: 50%;
@@ -47,7 +48,8 @@ $phones: 480px;
     text-align: center;
 
     @include tablets {
-      margin-bottom: 3.5625rem;
+      margin-bottom: 1.5625rem;
+      font-size: rem(40px);
     }
 
     @include phones {
@@ -89,13 +91,13 @@ $phones: 480px;
     background-position: center;
 
     @include tablets {
-      height: 14.625rem;
-      width: 11.25rem;
+      height: 11.625rem;
+      width: 10.25rem;
       margin: 0 auto;
       background-size: cover;
       margin: 0 auto;
     }
-
+   
     @include phones {
       height: 11.375rem;
       width: 8.75rem;
@@ -109,9 +111,11 @@ $phones: 480px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+  
 
     @include tablets {
-      margin-top: 1.6875rem;
+      margin-top: 0.6875rem;
     }
 
     @include phones {
@@ -123,6 +127,7 @@ $phones: 480px;
       font-size: 1.3125rem;
       margin-bottom: .875rem;
       display: flex;
+      transition: height 0.4s;
 
       @include phones {
         margin-bottom: .1875rem;
@@ -141,6 +146,7 @@ $phones: 480px;
       color: #281e1e;
       height: 0;
       overflow: hidden;
+      transition: height 0.4s;
 
       @include phones {
         font-size: .875rem;
@@ -154,6 +160,10 @@ $phones: 480px;
       text-align: center;
       height: 0;
       overflow: hidden;
+      transition: height 0.3s;
+      @include tablets {
+        font-size: 0.9rem;
+      }
 
       @include phones {
         font-size: .75rem;
@@ -168,7 +178,7 @@ $phones: 480px;
   }
 
   .team__description-text {
-    height: 3.4375rem;
+    height: 3.7rem;
 
     @include phones {
       height: 2.9rem;

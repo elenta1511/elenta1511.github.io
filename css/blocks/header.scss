@@ -44,6 +44,7 @@ $phones: 480px;
     display: flex;
     align-items: center;
     margin-right: 2.5rem;
+
     @include tablets {
       margin: 0;
     }
@@ -65,32 +66,35 @@ $phones: 480px;
     @include tablets {
       margin-top: 1.875rem;
     }
+
     @include phones {
       margin-top: rem(24px);
     }
   }
 
-    a {
-      color: #ffffff;
-      font-family: 'AlegreyaSans-Regular';
+  a {
+    color: #ffffff;
+    font-family: 'AlegreyaSans-Regular';
 
-      @include tablets {
-        font-size: 2.5rem;
-      }
-      @include phones {
-        font-size: rem(20px);
-      }
+    @include tablets {
+      font-size: 2.5rem;
     }
 
-    a:hover {
-      color: #0f5a47;
+    @include phones {
+      font-size: rem(20px);
     }
-  
+  }
+
+  a:hover {
+    color: #0f5a47;
+  }
+
 
   &__phone-pic {
     filter: brightness(0) invert(1);
   }
 }
+
 .phone_link {
   font-size: 1.5rem;
   display: flex;
@@ -116,9 +120,10 @@ $phones: 480px;
   display: none;
   top: rem(10px);
   right: rem(40px);
+
   @include phones {
-   right: rem(10px);
-   top: rem(5px);
+    right: rem(10px);
+    top: rem(5px);
   }
   @include tablets {
     z-index: 100;
@@ -169,6 +174,7 @@ $phones: 480px;
   }
 }
 }
+
 .phone_link {
   @include tablets {
     visibility: hidden;
