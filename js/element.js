@@ -1,4 +1,4 @@
-
+(function(){
 const element = document.querySelector(".team__content");
   
 element.addEventListener('click', e => {
@@ -18,5 +18,5 @@ element.addEventListener('click', e => {
       }
   });
 
-
+})()
 

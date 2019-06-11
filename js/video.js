@@ -1,3 +1,4 @@
+(function () {
 let video;
 let durationControl; 
 let soundControl;
@@ -85,3 +86,4 @@ function updateDuration(){
 function changeSoundVolume(){
   video.volume = soundControl.value/10; 
 }
+})()

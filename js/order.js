@@ -1,3 +1,5 @@
+(function(){
+
 const myForm = document.querySelector('.form');
 const send = document.querySelector('#send');
 const popap =  document.querySelector('.popap-order');
@@ -65,4 +67,6 @@ function validateField(label) {
   }
 }
 
+
+})()
 

@@ -631,11 +631,7 @@ button:focus {
 
 .map {
   height: 100vh;
-  background-color: #cfdeda;
-  position: relative;
-  background-image: url(../img/map.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
+  position: relative; }
 
 .header {
   color: #ffffff;
@@ -2578,3 +2574,30 @@ button:focus {
 
 a .social__pic:hover {
   fill: #111; }
+
+.map_block {
+  height: 100%;
+  width: 100%; }
+
+.hint {
+  padding: 5px;
+  height: 30px;
+  min-width: 180px;
+  font-size: 12px;
+  line-height: 1;
+  color: #07644d;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center; }
+
+.balloon {
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1;
+  color: #07644d;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff; }

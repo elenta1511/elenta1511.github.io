@@ -1,3 +1,5 @@
+(function(){
+
 function open() {
   navList.style.display = 'block';
   close.style.display = 'block';
@@ -12,4 +14,4 @@ const close = document.querySelector('.close');
 hambMenu.addEventListener('click',open);
 close.addEventListener('click', cl);
 
-
+})()

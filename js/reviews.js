@@ -1,3 +1,5 @@
+(function(){
+
 var list = document.querySelectorAll('li.reviews__elem');
 for(i=0;i<list.length;i++);
 
@@ -34,3 +36,6 @@ function two() {
 us[0].addEventListener('click', zero);
 us[1].addEventListener('click', one);
 us[2].addEventListener('click', two);
+
+
+})()

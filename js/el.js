@@ -1,3 +1,5 @@
+(function(){
+
 let vertical = () => {
   let calculateWidth = () => {
       let windowWidth = window.innerWidth;
@@ -36,3 +38,4 @@ let vertical = () => {
 }
 vertical();
 
+})()

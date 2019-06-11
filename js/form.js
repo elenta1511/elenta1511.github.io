@@ -1,3 +1,5 @@
+(function(){
+
 const myForm = document.querySelector('.form');
 const send = document.querySelector('#send');
 
@@ -22,3 +24,5 @@ send.addEventListener('click', function(e) {
   });
 
 });
+
+})()
