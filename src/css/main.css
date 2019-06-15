@@ -1995,6 +1995,10 @@ button:focus {
   position: absolute;
   left: 30%;
   top: 28%; }
+  @media screen and (max-width: 480px), (max-width: 767px) {
+    .play_btn {
+      left: 17%;
+      top: 14%; } }
 
 .video__tolbar {
   height: 2.25rem;

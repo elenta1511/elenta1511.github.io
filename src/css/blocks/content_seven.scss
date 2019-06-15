@@ -39,6 +39,10 @@ $phones: 480px;
   position: absolute;
   left: 30%;
   top: 28%;
+  @include phones{
+    left: 17%;
+    top: 14%;
+  }
 }
 .video__tolbar {
   height: rem(36px);
