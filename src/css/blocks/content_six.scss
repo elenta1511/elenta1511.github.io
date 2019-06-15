@@ -11,7 +11,7 @@ $phones: 480px;
   }
 }
 @mixin phones {
-  @media screen and (max-width: $phones), (max-width: 480px) {
+  @media screen and (max-width: $phones), (max-width: 767px) {
     @content;
   }
 }
@@ -72,7 +72,8 @@ $phones: 480px;
     text-align: center;
 
     @include tablets {
-      margin-top: 4.69rem;
+      margin-top: 2.69rem;
+      margin-bottom: .75rem;
     }
 
     @include phones {
@@ -94,7 +95,7 @@ $phones: 480px;
 
     @include tablets {
       width: 29.0625rem;
-      height: 37.5rem;
+      height: 34.5rem;
       flex-direction: column;
       align-items: center;
       position: relative;
@@ -122,7 +123,7 @@ $phones: 480px;
         width: 12.5625rem;
         margin-right: 0;
         margin-left: 0;
-        margin-top: 5rem;
+        margin-top: 3rem;
       }
 
       @include phones {
@@ -221,6 +222,9 @@ $phones: 480px;
   align-items: center;
   margin-top: 2.75rem;
   cursor: pointer;
+  @include tablets {
+    margin-top: 0.75rem;
+  }
 
   @include phones {
     margin-top: 1rem;
@@ -275,7 +279,7 @@ $phones: 480px;
   left: 0;
   
 
-  @media screen and (max-width:480px) {
+  @media screen and (max-width:480px), (max-width:767px) {
     opacity: 0;
     left: -1000px;
   }
@@ -287,7 +291,7 @@ $phones: 480px;
   left: 0;
   bottom: -5.5rem;
 
-  @media screen and (max-width:480px) {
+  @media screen and (max-width:480px), (max-width:767px) {
     opacity: 0;
     left: -1000px;
   }

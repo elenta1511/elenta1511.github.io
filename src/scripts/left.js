@@ -1,5 +1,5 @@
 ;(function(){
-
+// горизонтальный слайдер в секции ассортимента
   var moveSlide = function(container, slideNum) {
     var items = container.find('.slider__one'),
     activeSlide = items.filter('.active'),

@@ -17,20 +17,20 @@
   <div class="wrapper">
     <nav class="pagination">
       <ul class="pagination__pages">
-        <li class="pagination__pages-item pagination__pages-active"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
-        <li class="pagination__pages-item"><a href="#" class="pagination__pages-link">&#8226;</a></li>
+        <li class="pagination__pages-item pagination__pages-active"><a href="#" data-scroll-to="#one"  class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#" data-scroll-to="#aboutUs" class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#" data-scroll-to="#candyBars" class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#"  data-scroll-to="#team" class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#" data-scroll-to="#menu" class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#" data-scroll-to="#reviews" class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#" data-scroll-to="#howWeWork" class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#" data-scroll-to="#sendAnOrder" class="pagination__pages-link"></a></li>
+        <li class="pagination__pages-item"><a href="#" data-scroll-to="#contacts" class="pagination__pages-link"></a></li>
       </ul>
     </nav>
     <div class="maincontent">
 
-    <section class="hero section active">
+    <section class="hero section active" id="one">
       <div class="container container_hero">
         <header class="header">
           <div class="header__logo">CHO <br> CCO</div>
@@ -38,13 +38,13 @@
             <a href="#" class="hamburger_menu" id="hamb"></a>
             <a href="#" class="close" id="cl">&#10006;</a>
             <ul class="header__nav-list" id="nav">
-              <li class="header__nav-item"><a href="#">О нас</a></li>
-              <li class="header__nav-item"><a href="#">Батончики</a></li>
-              <li class="header__nav-item"><a href="#">Команда</a></li>
-              <li class="header__nav-item"><a href="#">Меню</a></li>
-              <li class="header__nav-item"><a href="#">Отзывы</a></li>
-              <li class="header__nav-item"><a href="#">Как мы работаем</a></li>
-              <li class="header__nav-item"><a href="#">Контакты</a></li>
+              <li class="header__nav-item"><a href="#" data-scroll-to="#aboutUs" >О нас</a></li>
+              <li class="header__nav-item"><a href="#" data-scroll-to="#candyBars" >Батончики</a></li>
+              <li class="header__nav-item"><a href="#" data-scroll-to="#team" >Команда</a></li>
+              <li class="header__nav-item"><a href="#" data-scroll-to="#menu" >Меню</a></li>
+              <li class="header__nav-item"><a href="#" data-scroll-to="#reviews" >Отзывы</a></li>
+              <li class="header__nav-item"><a href="#" data-scroll-to="#howWeWork" >Как мы работаем</a></li>
+              <li class="header__nav-item"><a href="#" data-scroll-to="#contacts" >Контакты</a></li>
             </ul>
           </nav>
           <a href="tel:+78009039090" class="phone_link">
@@ -59,7 +59,7 @@
             <h1 class="title content_title">натуральные <br> шоколадные <br> батончики</h1>
             <div class="content__text">Наши батончики идеально подходят для <br> тех, кто следит за своим здоровьем
             </div>
-            <div class="content__button"><button class="button button_one">Заказать</button></div>
+            <div class="content__button"><button class="button button_one" data-scroll-to="#sendAnOrder" >Заказать</button></div>
             <div class="advant">
               <ul class="advant__list">
                 <li class="advant__item">
@@ -92,7 +92,7 @@
       </div>
     </section>
    
-    <section class="benefit section">
+    <section class="benefit section" id="aboutUs" >
       <div class="container container_benefit">
         <div class="info">
           <h2 class=" title info_title">почему chocco?</h2>
@@ -151,7 +151,7 @@
       </div>
     </section>  
   
-    <section class="assortment section">
+    <section class="assortment section" id="candyBars" >
       <div class="container container_assortment">
         <a href="#" class="arrow" id="left">
           <svg class="arrow__pic">
@@ -179,7 +179,7 @@
                 <div class="slider__content-order">
                   <div class="slider__content-order-cost">140 ₽</div>
                   <div class="slider__content-order-button">
-                    <button class="button">Заказать</button>
+                    <button class="button" data-scroll-to="#sendAnOrder">Заказать</button>
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@
                 <div class="slider__content-order">
                   <div class="slider__content-order-cost">140 ₽</div>
                   <div class="slider__content-order-button">
-                    <button class="button">Заказать</button>
+                    <button class="button" data-scroll-to="#sendAnOrder">Заказать</button>
                   </div>
                 </div>
               </div>
@@ -265,7 +265,7 @@
       </div>
     </section>
   
-    <section class="workers section">
+    <section class="workers section" id="team" >
       <div class="container container_workers">
         <div class="team">
           <h2 class="title team_title">команда</h2>
@@ -323,7 +323,7 @@
       </div>
     </section>
 
-    <section class="menu section">
+    <section class="menu section" id="menu" >
       <div class="accordion">
         <h2 class="title accordion_title">Меню</h2>
         <ul class="accordion__list">
@@ -376,7 +376,7 @@
       </div>
     </section>
   
-    <section class="feedback section">
+    <section class="feedback section" id="reviews" >
       <div class="container container_feedback">
         <div class="reviews">
           <div class="reviews__strawberry"></div>
@@ -384,7 +384,7 @@
           <div class="reviews__content">
             <div class="circle"></div>
             <ul class="reviews__list">
-              <li class="reviews__elem ">
+              <li class="reviews__elem reviews_active">
                 <div class="reviews__content-photo" style="background-image:url('img/alena.jpg');">
                 </div>
                 <div class="reviews__content-text">
@@ -453,7 +453,7 @@
       </div>
     </section>
   
-    <section class="video_block section">
+    <section class="video_block section" id="howWeWork">
       <div class="container container_video">
         <div class="video">
           <h2 class="title title_video">как мы работаем</h2>
@@ -486,7 +486,7 @@
       </div>
     </section>
   
-    <section class="order section">
+    <section class="order section" id="sendAnOrder">
       <div class="container container_order">
         <form action="" class="form">
           <h2 class="title title_form">закажите доставку</h2>
@@ -574,7 +574,7 @@
       </div>
     </section>
   
-    <section class="map section">
+    <section class="map section" id="contacts">
       <div class="map_block" id="map"></div>
         
       <footer class="footer">

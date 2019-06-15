@@ -11,7 +11,7 @@ $phones: 480px;
   }
 }
 @mixin phones {
-  @media screen and (max-width: $phones), (max-width: 480px) {
+  @media screen and (max-width: $phones), (max-width: 767px) {
     @content;
   }
 }
@@ -114,7 +114,7 @@ $phones: 480px;
   .accordion__form-text {
     p {
       opacity: 1;
-      transition: opacity 5s;
+      transition: opacity 8s;
     }
   }
 }

@@ -8,7 +8,7 @@ $phones: 480px;
   }
 }
 @mixin phones {
-  @media screen and (max-width: $phones), (max-width: 480px) {
+  @media screen and (max-width: $phones), (max-width: 767px) {
     @content;
   }
 }

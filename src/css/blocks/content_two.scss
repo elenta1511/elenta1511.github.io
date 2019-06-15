@@ -8,7 +8,7 @@ $phones: 480px;
   }
 }
 @mixin phones {
-  @media screen and (max-width: $phones), (max-width: 480px) {
+  @media screen and (max-width: $phones), (max-width: 767px) {
     @content;
   }
 }
@@ -28,6 +28,10 @@ $phones: 480px;
   &_title {
     margin-bottom: .625rem;
 
+    @include tablets {
+      font-size: rem(30px);
+    }
+
     @include phones {
       font-size: 1.75rem;
     }
@@ -38,6 +42,11 @@ $phones: 480px;
     font-size: 1.125rem;
     color: #666666;
     margin-bottom: .5625rem;
+
+    @include tablets {
+      margin-bottom: 0;
+      font-size: rem(16px);
+    }
 
     @include phones {
       font-size: .81rem;
@@ -70,9 +79,9 @@ $phones: 480px;
     margin: 1.9375rem auto;
 
     @include tablets {
-      height: 7.68rem;
-      width: 7.68rem;
-      margin: 1.56rem auto;
+      height: 6.68rem;
+      width: 6.68rem;
+      margin: .56rem auto;
     }
 
     @include phones {
@@ -87,6 +96,9 @@ $phones: 480px;
     width: 4.375rem;
     fill: #f2f5f4;
     stroke: black;
+    @include tablets{
+      height: 3.375rem;
+    }
   }
 
   &__container {
@@ -101,7 +113,7 @@ $phones: 480px;
     margin-bottom: 1.4375rem;
 
     @include tablets {
-      margin-bottom: 1rem;
+      margin-bottom: rem(10px);
     }
 
     @include phones {

@@ -1,42 +1,38 @@
+//слайдер в форме отзыва
 (function(){
 
-var list = document.querySelectorAll('li.reviews__elem');
+  var move = function(container, numbSlide) {             
+   
+    var items = container.find('.reviews__elem '),
+    activeSlide = items.filter('.reviews_active'),
+    reqItem = items.eq(numbSlide),
+    reqIndex = reqItem.index(),
+    list = container.find('.reviews__list');
 
-for(var a=0;a<list.length;a++);
-
-var us = document.querySelectorAll('li.reviews__user-item');
-
-for( var i=0;i<us.length;i++);
-us[0].classList.add('user-active');
-list[0].classList.add('reviews_active');
-
-function zero() {
-  us[0].classList.add('user-active');
-  list[0].classList.add('reviews_active');
-  us[1].classList.remove('user-active');
-  list[1].classList.remove('reviews_active');
-  us[2].classList.remove('user-active');
-  list[2].classList.remove('reviews_active');
-};
-function one() {
-   us[1].classList.add('user-active');
-  list[1].classList.add('reviews_active');
-  us[0].classList.remove('user-active');
-  list[0].classList.remove('reviews_active');
-  us[2].classList.remove('user-active');
-  list[2].classList.remove('reviews_active');
-};
-function two() {
- us[2].classList.add('user-active');
- list[2].classList.add('reviews_active');
- us[0].classList.remove('user-active');
- list[0].classList.remove('reviews_active');
- us[1].classList.remove('user-active');
- list[1].classList.remove('reviews_active');
-};
-
-us[0].addEventListener('click', zero);
-us[1].addEventListener('click', one);
-us[2].addEventListener('click', two);
+    if(reqItem.length) {
+      list.animate({
+        'left': -reqIndex * 100 + '%',          
+      }, function() {
+        activeSlide.removeClass('reviews_active');  
+        reqItem.addClass('reviews_active');        
+      });
+    }
+  };
+var userActive = function(index) {   
+  $('.reviews')
+  .find('.reviews__user-item')
+  .eq(index)
+  .addClass('user-active')
+  .siblings()
+  .removeClass('user-active');
+}
+    $('.reviews__user-item').on('click', function(e) {  
+        e.preventDefault();
+        var $this = $(this),
+            container = $this.closest('.reviews'),
+            index = $this.index();
+        move(container, index);
+        userActive(index);
+  });
 
 })()

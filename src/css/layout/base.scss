@@ -115,24 +115,38 @@ button:focus {
   &__pages {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    li {
+    &-item {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.5rem;
-      filter: brightness(0) invert(1);
       height: 1rem;
       width: 1rem;
       border-radius: 50%;
       margin-bottom: .1875rem;
-    }
+      padding: 0.5625rem;
+      position: relative;
 
-    li:active,
-    &-active {
-      border: 1px solid #ffffff;
+      a {
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color: #fff;
+        content: '';
+        border-radius: 50%;
+        box-shadow: 0 0 10px #00acd0c7;
+      }
     }
   }
+}
+
+.pagination__pages-active {
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 10px #61c4d9;
 }
 
 .hero {
@@ -201,5 +215,10 @@ button:focus {
 .map {
   height: 100vh;
   position: relative;
+}
+
+.no_scroll {
+  display: none;
+  position: fixed;
 }
 
